@@ -16,7 +16,7 @@ Ruby terminology. Also it contains guides with language basics and installation.
 - [Gemfiles](https://bundler.io/v2.0/gemfile.html)
 - [Minitest suite](https://github.com/seattlerb/minitest#unit-tests)
 
-## 15 Minuets tasks
+## 15 Minutes tasks
 
 This part of ruby module consist of simple tasks which requires few lines of
 ruby basics understanding.
