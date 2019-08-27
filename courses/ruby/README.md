@@ -2,6 +2,11 @@
 
 Learn Ruby in this module
 
+## Contribution
+
+If you find `TODO` somewhere in repository it means that this file needs some
+love - don't hesitate to contribute.
+
 ## Getting Started
 
 This section designed for making you familiar with the most common aspects and
@@ -27,8 +32,10 @@ starting to work on tasks.
 List of exercises:
 
 - [ex01-enumerables](./ex01-enumerables)
+- [ex02-strings](./ex02-strings)
 
 
 Resources:
 
-- [Enumerable](https://ruby-doc.org/core-2.6.3/Enumerable.html).
+- [Enumerable](https://ruby-doc.org/core-2.6.3/Enumerable.html)
+- [String](https://ruby-doc.org/core-2.4.0/String.html)
