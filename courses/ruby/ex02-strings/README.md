@@ -55,4 +55,13 @@ Fabulous run in 0.000844s, 27253.2837 runs/s, 30808.0598 assertions/s.
 23 runs, 26 assertions, 0 failures, 0 errors, 0 skips
 ```
 
+### Running rubocop:
+`rubocop strings_test.rb`
 
+Expected output:
+```bash
+Inspecting 1 file
+.
+
+1 file inspected, no offenses detected
+```
