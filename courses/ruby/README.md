@@ -35,7 +35,7 @@ starting to work on tasks.
 - [ex02-strings](./ex02-strings)
 - [ex03-wallet](./ex03-wallet)
 
-##### Resources:
+#### Resources:
 
 - [Enumerable](https://ruby-doc.org/core-2.6.3/Enumerable.html)
 - [String](https://ruby-doc.org/core-2.4.0/String.html)
@@ -51,7 +51,7 @@ do part of the work at compile time that would otherwise be done at runtime.
 
 - [ex04-myattr](./ex04-myattr)
 
-##### Resources:
+#### Resources:
 
 - [Don't Know Metaprogramming In Ruby?](http://rubylearning.com/blog/2010/11/23/dont-know-metaprogramming-in-ruby/#what-is-metaprogramming:18bee3e64eb657db6a08ae0ff05e44b8)
 - [How to Use attr_accessor, attr_writer & attr_reader](https://www.rubyguides.com/2018/11/attr_accessor/)

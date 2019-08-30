@@ -120,5 +120,15 @@ class MyAttrReaderTest < Minitest::Test
     # Check that only expected methods were defined.
     assert_equal %i[readable1 readable2 readable3] - new_class_methods, []
   end
+
+  def test_my_attr_reader_namespace
+    # skip
+    assert_raises NoMethodError do
+      my_attr_reader(:readable)
+    end
+
+    assert_respond_to Module, :my_attr_reader
+    assert_respond_to Class, :my_attr_reader
+  end
 end
 
