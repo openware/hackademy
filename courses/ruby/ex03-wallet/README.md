@@ -22,9 +22,9 @@ end
 You should implement a simple wallet Class, which may contain 5 types of currency: penny, nickel, dime, quarter, dollar.
 Your wallet should store two fields: counts of cents and dollars. This fields must be readable.
 Also you should create next methods: 
-1)Initializing new wallet with specified nominals (for one for each type) or just empty wallet if no arguments passed 
-2) Adding any coin or dollar to wallet ( "<<" method - takes one argument - name of currency )
-3) Getting one coin or one dollar from wallet if respective nominal exists in wallet. ( "take" method - takes some number of currencies)
+1)Initializing new wallet with specified nominals (for one for each type) or just empty wallet if no arguments passed \
+2) Adding any coin or dollar to wallet ( "<<" method - takes one argument - name of currency ) \
+3) Getting one coin or one dollar from wallet if respective nominal exists in wallet. ( "take" method - takes some number of currencies) \
 
 # Running the test files
 Unit tests are implemented with Minitest. If you did not check doc yet it's time to do it now.
