@@ -2,7 +2,7 @@ The goal of these exercises is to help you understand classes and methods, both 
 
 # Exercise structure
 
-```
+```ruby
 class WalletTest < Minitest::Test
   def test_wallet_starts_at_zero
     #skip
@@ -18,5 +18,30 @@ class WalletTest < Minitest::Test
     assert_equal 0.06, wallet.dollars
   end
 end
-
 ```
+You should implement a simple wallet Class, which may contain 5 types of currency: penny, nickel, dime, quarter, dollar.
+Your wallet should store two fields: counts of cents and dollars. This fields must be readable.
+Also you should create next methods: 
+1)Initializing new wallet with specified nominals (for one for each type) or just empty wallet if no arguments passed 
+2) Adding any coin or dollar to wallet ( "<<" method - takes one argument - name of currency )
+3) Getting one coin or one dollar from wallet if respective nominal exists in wallet. ( "take" method - takes some number of currencies)
+
+# Running the test files
+Unit tests are implemented with Minitest. If you did not check doc yet it's time to do it now.
+
+# Running test suite:
+```console
+ruby wallet_test.rb
+```
+Expected output:
+```console
+Run options: --seed 8431
+
+# Running:
+
+..........
+
+Finished in 0.000935s, 10699.5929 runs/s, 34238.6972 assertions/s.
+10 runs, 32 assertions, 0 failures, 0 errors, 0 skips
+
+
