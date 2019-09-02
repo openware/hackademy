@@ -43,5 +43,22 @@ Run options: --seed 8431
 
 Finished in 0.000935s, 10699.5929 runs/s, 34238.6972 assertions/s.
 10 runs, 32 assertions, 0 failures, 0 errors, 0 skips
+```
+
+# Running rubocop:
+```console
+rubocop wallet_test.rb
+```
+
+Expected output:
+```console
+Inspecting 1 file
+.
+
+1 file inspected, no offenses detected
+```
+
+# Bonus
+Fix all rubocop offences and submit patch without solution. If there is something to improve in .rubocop.yml you are welcome!
 
 
