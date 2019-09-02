@@ -1,3 +1,3 @@
-# TODO: Structure and finalize me please !
+The goal of these exercises is to help you understand classes and methods, both how they work and how they can improve you code readability and flexability instead using just functions.
 
-Use ex01 README.md as a template.
+#Exercise structure
