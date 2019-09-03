@@ -31,4 +31,30 @@ class Ex05Test < Minitest::Test
 
     assert_equal false, res
   end
+
+  def test_check_class
+    skip
+    line = "hello world"
+    string = line.ask
+    cls = string.class
+
+    assert_equal StringAsk, cls
+  end
+
+  def test_check_parent_class
+    skip
+    line = "hello world"
+    string = line.ask
+    cls = string.parent
+
+    assert_equal String, cls
+  end
+
+  def test_length
+    skip
+    line = "hello world"
+    string = line.ask
+    
+    assert_equal line.length, string.length
+  end
 end
