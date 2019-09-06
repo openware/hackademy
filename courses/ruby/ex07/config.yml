@@ -1,0 +1,4 @@
+---   
+config:
+    - name: MyApp
+    - type: String
