@@ -1,0 +1,21 @@
+test:
+  database:
+    user: <%= ENV.fetch('DATABASE_USER', 'root') %>
+    password: <%= ENV.fetch('DATABASE_PASS', 'changeme') %>
+  public:
+     mode: public
+     signer: app1
+  private:
+     mode: private
+     signer: app2
+     private:
+       login: any_login@bootcamp.com
+       password: elpmaxe
+
+development:
+  app_name: dev app
+  app_author: dev@heliostech.fr
+
+production:
+  server: http://httpd.example.org/
+  my_script: example.sh
