@@ -1,0 +1,20 @@
+test1:
+  app_name: test app
+  app_author: test@heliostech.fr
+
+development:
+  app_name: dev app
+  app_author: dev@heliostech.fr
+
+test:
+  secrets:
+     private_key: private
+     signer: app
+     
+k:
+    kek:
+        kekek:
+            kekekek:
+                ex1: data1
+                ex2: data2
+                ex3: data3
