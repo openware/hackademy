@@ -1,4 +1,13 @@
----   
 config:
-    - name: MyApp
-    - type: String
+     name: MyApp
+     type: String
+
+debug:
+     name: DeApp
+     type: Integer
+     other: 
+        smth: vall
+        oth: info
+        kpi:
+            fam: scs
+            fcc: sjs
