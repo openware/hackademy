@@ -1,5 +1,7 @@
 require "singleton"
 require "yaml"
+require "hashie"
+require "erb"
 
 module MyApp
   def config
@@ -12,32 +14,18 @@ module MyApp
     include Singleton
 
     def initialize
-      @yaml_config_file = YAML.safe_load(File.read("config.yml"))
+      erb = ERB.new File.read "config.yml.erb"
+      yaml = YAML.safe_load erb.result binding
+      @env = ENV.fetch("MY_APP_ENV", "test")
+      @config = Hashie::Mash.new(yaml[@env])
     end
 
-    attr_reader :yaml_config_file
+    attr_reader :yaml, :env
 
     def method_missing(m)
-      key = m.to_s
-      @yaml_config_file.each do |key1, value|
-      key1 == ENV["MY_APP_ENVIRONEMNT"] ? (return rec_search(value, key)) : (return nil)
-      end
-    end
-
-    def rec_search(value, key_word)
-      if !value.is_a?(Hash)
-        puts value   
-      else
-        value.each do |k, v|
-          if k == key_word
-            return v
-          else
-            return rec_search(v, key_word) if v.is_a?(Hash)
-          end
-        end
-      end
+      @config[m]
     end
   end
 end
 
-pp MyApp.config.private_key
+pp MyApp.config.config.name
