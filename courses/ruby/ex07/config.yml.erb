@@ -1,0 +1,6 @@
+test:
+  database:
+    user: <%= ENV.fetch('DATABASE_USER', 'root') %>
+    password: <%= ENV.fetch('DATABASE_PASS', 'changeme') %>
+    info:
+      inf: <%= ENV.fetch('SOME_INFO', 'information') %>

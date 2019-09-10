@@ -1,5 +1,7 @@
 require 'yaml'
 require 'singleton'
+require 'hashie'
+require 'erb'
 
 module MyApp
   def config
@@ -10,24 +12,25 @@ module MyApp
 
   class Config
     include Singleton
+    
+    attr_reader :env
+
     def initialize
-      @config = YAML.load_file("config.yml")
+      erb = ERB.new File.read 'config.yml.erb'
+      @config = YAML.load erb.result
+      @env = ENV.fetch('ENV_VAR', :development)
     end
     
     def out
       @config
     end
+    
     def method_missing(m)
       res = nil
       find = m.to_s
       @config.each do |key, value|
         if key == ENV["ENV_VAR"]
-          if value.is_a?(Hash)
-            res = search(value, find)
-            return res
-          else
-            puts "Error"
-          end
+          value.is_a?(Hash) ? (return search(value, find)) : (return "Error")
         end
       end
     end
@@ -35,13 +38,7 @@ module MyApp
     def search(node, find)
       if node.is_a?(Hash)
         node.each do |key, value|
-          if key == find
-            res = value
-            return res
-          elsif value.is_a?(Hash)
-            res = search(value, find)
-            return res
-          end
+          key == find ? (return value) : ((return search(value, find)) if value.is_a?(Hash))
         end
         nil
       end
@@ -50,4 +47,4 @@ module MyApp
 end
 
 test = MyApp.config
-puts test.other
+puts test.inf
