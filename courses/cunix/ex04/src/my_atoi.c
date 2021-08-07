@@ -1,5 +1,6 @@
 #include "test.h"
 
+/* converts string to integer */
 int my_atoi(const char *nptr)
 {
     int i = (nptr[0] == '-') ? 1 : 0;
