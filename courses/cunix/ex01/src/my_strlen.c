@@ -1,4 +1,4 @@
-#include "../include/test.h"
+#include "test.h"
 
 /* calculate the length of a string */
 unsigned int my_strlen(char *str)
