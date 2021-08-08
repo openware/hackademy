@@ -5,7 +5,7 @@ RM					:= rm -rf
 
 LDFLAGS				+= -Llib
 
-CFLAGS				+= -Iinclude -Wall -Wextra -Werror -g
+CFLAGS				+= -Iinclude -Wall -Wextra -Werror -g --std=c99
 
 SRCS				:= $(wildcard src/*.c)
 
@@ -13,7 +13,7 @@ OBJS				:= $(SRCS:.c=.o)
 
 NAME				:= binary_tree
 
-all:				$(NAME)
+all:				$(NAME) clean
 
 $(NAME):			$(OBJS)
 						$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
