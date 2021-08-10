@@ -18,11 +18,11 @@ int main(void)
 
 	char * s = ft_strdup((char*)"coucou");
 	/* 1 */ check(!strcmp(s, "coucou"));
-	/* 2 */ mcheck(s, sizeof(char *) * (strlen("coucou") + 1)); free(s); showLeaks();
+	/* 2 */ mcheck(s, strlen("coucou") + 1); free(s); showLeaks();
 	
 	s = ft_strdup((char*)"");
 	/* 3 */ check(!strcmp(s, ""));
-	/* 4 */ mcheck(s, sizeof(char *)); free(s); showLeaks();
+	/* 4 */ mcheck(s, 1); free(s); showLeaks();
 	write(1, "\n", 1);
 	return (0);
 }

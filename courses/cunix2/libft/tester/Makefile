@@ -14,7 +14,7 @@ UNAME = $(shell uname -s)
 VALGRIND = valgrind -v --leak-check=full --track-origins=yes
 
 $(MANDATORY): %: mandatory_start
-	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
+	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out # && rm -f a.out
 
 mandatory_start:
 	@tput setaf 6

@@ -19,9 +19,7 @@
 
 int ft_strncmp(const char *string1, const char *string2, size_t num)
 {
-    num++;
-
-    while (*string1 != '\0' && *string2 != '\0' && --num != 0)
+    while (num != 0 && *string1 != '\0' && *string2 != '\0')
     {
         if (*string1 > *string2)
         {
@@ -33,6 +31,7 @@ int ft_strncmp(const char *string1, const char *string2, size_t num)
         }
         string1++;
         string2++;
+        num--;
     }
 
     if (*string1 == *string2 || num == 0)

@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  ft_strdup.c
+ *       Filename:  ft_strchr.c
  *
- *    Description:  Copy string from constant to pointer 
+ *    Description:  Finds first occurence of given character 
  *
  *        Version:  1.0
- *        Created:  08/09/2021 01:21:45 PM
+ *        Created:  08/10/2021 10:48:11 AM
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,21 +15,19 @@
  *
  * =====================================================================================
  */
-#include <stdlib.h>
 
-char *ft_strdup(char *s)
+char *ft_strchr(const char *s, int c)
 {
-    int len = 1;
-    while (*s++ != '\0')
-    {
-        ++len;
-    }
-    s = s - len;
+    c %= 256;
 
-    char *new_s = (char *) malloc(sizeof(char) * (size_t) len);
     while (*s != '\0')
-        *new_s++ = *s++;
-    *new_s = *s;
+    {
+        if (*s == c)
+        {
+            return (char *) s;
+        }
+        s++;
+    }
 
-    return new_s - len + 1;
+    return (*s == c) ? (char *) s : 0;
 }
