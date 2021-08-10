@@ -8,7 +8,7 @@ MANDATORY		= memset bzero memcpy memmove memchr memcmp isalpha isdigit \
 				strdup strsub strjoin strtrim strsplit strmapi \
 				striteri
 
-CC		= clang++
+CC = clang++
 CFLAGS	= -g3 -ldl -std=c++11 -I utils/ -I$(LIBFT_PATH)
 UNAME = $(shell uname -s)
 VALGRIND = valgrind -q --leak-check=full
@@ -32,4 +32,4 @@ clean:
 fclean:
 	make fclean -C $(LIBFT_PATH) && rm -rf a.out*
 
-.PHONY:	mandatory_start m bonus_start b a fclean clean update message
+.PHONY:	mandatory_start m a fclean clean
