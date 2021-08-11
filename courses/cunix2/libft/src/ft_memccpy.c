@@ -27,9 +27,15 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
     { 
         if (*dest_bytes == c)
         {
-            return dest + 1;
+            return dest_bytes + 1;
         }
         *dest_bytes++ = *src_bytes++;
+        /*
+        if (*(src_bytes - 1) == '\0')
+        {
+            return dest_bytes;
+        }
+        */
     }
 
     return 0;
@@ -38,7 +44,10 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 int main(void)
 {
     char dest[100];
+    dest[1] = 'A';
     ft_memccpy(dest, "coucou", 'A', 1);
     ft_memccpy(dest, "coucou", 'c', 10);
+    char *s = (char *) ft_memccpy(dest, "B", 0, 10);
+    s--; s++;
 }
 */

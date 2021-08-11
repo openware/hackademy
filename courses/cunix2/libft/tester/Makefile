@@ -11,10 +11,10 @@ MANDATORY		= memset bzero memcpy memmove memchr memcmp isalpha isdigit \
 CC		= clang++
 CFLAGS	= -g3 -ldl -std=c++11 -I utils/ -I$(LIBFT_PATH)
 UNAME = $(shell uname -s)
-VALGRIND = valgrind -v --leak-check=full --track-origins=yes
+VALGRIND = valgrind -q --leak-check=full
 
 $(MANDATORY): %: mandatory_start
-	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out # && rm -f a.out
+	@$(CC) $(CFLAGS) $(UTILS) $(TESTS_PATH)ft_$*_test.cpp -L$(LIBFT_PATH) -lft && $(VALGRIND) ./a.out && rm -f a.out
 
 mandatory_start:
 	@tput setaf 6
