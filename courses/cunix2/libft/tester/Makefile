@@ -3,13 +3,13 @@ UTILS			= $(addprefix utils/, sigsegv.cpp color.cpp check.cpp leaks.cpp)
 PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= ../libft
 TESTS_PATH		= tests/
-MANDATORY		= memset bzero memcpy memmove memchr memcmp isalpha isdigit \
+MANDATORY		= abs div bzero memcpy memmove memchr memcmp isalpha isdigit \
 				isascii toupper tolower strchr strrchr strncmp strnstr \
-				strdup strsub strjoin strtrim strsplit strmapi \
-				striteri
+				strdup strsub strjoin strtrim strsplit strmap \
+				striter memset strstr
 
 CC = clang++
-CFLAGS	= -g3 -ldl -std=c++11 -I utils/ -I$(LIBFT_PATH)
+CFLAGS	= -g3 -ldl -std=c++98 -I utils/ -I$(LIBFT_PATH)
 UNAME = $(shell uname -s)
 VALGRIND = valgrind -q --leak-check=full
 

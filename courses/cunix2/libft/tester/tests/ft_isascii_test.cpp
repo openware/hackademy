@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }

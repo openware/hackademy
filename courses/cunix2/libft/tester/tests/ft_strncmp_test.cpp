@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -21,12 +21,12 @@ int main(void)
 	/* 3 */ check(ft_strncmp("1234", "1235", 4) < 0); showLeaks();
 	/* 4 */ check(ft_strncmp("1234", "1235", -1) < 0); showLeaks();
 	/* 5 */ check(ft_strncmp("", "", 42) == 0); showLeaks();
-	/* 6 */ check(ft_strncmp("Tripouille", "Tripouille", 42) == 0); showLeaks();
-	/* 7 */ check(ft_strncmp("Tripouille", "tripouille", 42) < 0); showLeaks();
-	/* 8 */ check(ft_strncmp("Tripouille", "TriPouille", 42) > 0); showLeaks();
-	/* 9 */ check(ft_strncmp("Tripouille", "TripouillE", 42) > 0); showLeaks();
-	/* 10 */ check(ft_strncmp("Tripouille", "TripouilleX", 42) < 0); showLeaks();
-	/* 11 */ check(ft_strncmp("Tripouille", "Tripouill", 42) > 0); showLeaks();
+	/* 6 */ check(ft_strncmp("hackademy", "hackademy", 42) == 0); showLeaks();
+	/* 7 */ check(ft_strncmp("hackademy", "hackademy", 42) < 0); showLeaks();
+	/* 8 */ check(ft_strncmp("hackademy", "hackademy", 42) > 0); showLeaks();
+	/* 9 */ check(ft_strncmp("hackademy", "hackademy", 42) > 0); showLeaks();
+	/* 10 */ check(ft_strncmp("hackademy", "hackademyX", 42) < 0); showLeaks();
+	/* 11 */ check(ft_strncmp("hackademy", "Tripouill", 42) > 0); showLeaks();
 	/* 12 */ check(ft_strncmp("", "1", 0) == 0); showLeaks();
 	/* 13 */ check(ft_strncmp("1", "", 0) == 0); showLeaks();
 	/* 14 */ check(ft_strncmp("", "1", 1) < 0); showLeaks();
