@@ -13,6 +13,7 @@ void   test_small()
   assert(my_atoi("42") == 42);
   assert(my_atoi("-42") == -42);
   assert(my_atoi("1k") == 1);
+  assert(my_atoi("123-456") == 123);
 }
 
 void           test_long()
