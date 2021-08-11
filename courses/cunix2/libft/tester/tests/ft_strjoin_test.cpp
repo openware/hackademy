@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -16,9 +16,9 @@ int main(void)
 	signal(SIGSEGV, sigsegv);
 	title("ft_strjoin\t: ")
 
-	char * s = ft_strjoin("tripouille", "42");
-	/* 1 */ check(!strcmp(s, "tripouille42"));
-	/* 2 */ mcheck(s, strlen("tripouille") + strlen("42") + 1); free(s); showLeaks();
+	char * s = ft_strjoin("hackademy", "42");
+	/* 1 */ check(!strcmp(s, "hackademy42"));
+	/* 2 */ mcheck(s, strlen("hackademy") + strlen("42") + 1); free(s); showLeaks();
 
 	s = ft_strjoin("", "42");
 	/* 3 */ check(!strcmp(s, "42"));

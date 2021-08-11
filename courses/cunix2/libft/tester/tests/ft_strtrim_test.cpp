@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -16,17 +16,17 @@ int main(void)
 	signal(SIGSEGV, sigsegv);
 	title("ft_strtrim\t: ")
 
-	char * s = ft_strtrim("   tripouille");
-	/* 1 */ check(!strcmp(s, "tripouille"));
-	/* 2 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
+	char * s = ft_strtrim("   hackademy");
+	/* 1 */ check(!strcmp(s, "hackademy"));
+	/* 2 */ mcheck(s, strlen("hackademy") + 1); free(s); showLeaks();
 
-	s = ft_strtrim("tripouille   ");
-	/* 3 */ check(!strcmp(s, "tripouille"));
-	/* 4 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
+	s = ft_strtrim("hackademy   ");
+	/* 3 */ check(!strcmp(s, "hackademy"));
+	/* 4 */ mcheck(s, strlen("hackademy") + 1); free(s); showLeaks();
 
-	s = ft_strtrim("   tripouille   ");
-	/* 5 */ check(!strcmp(s, "tripouille"));
-	/* 6 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
+	s = ft_strtrim("   hackademy   ");
+	/* 5 */ check(!strcmp(s, "hackademy"));
+	/* 6 */ mcheck(s, strlen("hackademy") + 1); free(s); showLeaks();
 	
 	s = ft_strtrim("      ");
 	/* 7 */ check(!strcmp(s, ""));
