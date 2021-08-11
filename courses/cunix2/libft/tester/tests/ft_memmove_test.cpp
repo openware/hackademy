@@ -20,7 +20,7 @@ int main(void)
 	char s0[] = { 0,  0,  0,  0,  0,  0, 0};
 	char sCpy[] = {65, 66, 67, 68, 69, 0, 45};
 	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
-	char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
+	char sResult2[] = {67, 67, 68, 67, 69, 0, 45};
 
 	/* 1 */ check(ft_memmove(s0, s, 7) == s0 && !memcmp(s, s0, 7)); showLeaks(); //Post 0
 	/* 2 */ check(ft_memmove(s, s + 2, 0) && !memcmp(s, sCpy, 7)); showLeaks(); //0 move
