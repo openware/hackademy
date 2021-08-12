@@ -1,3 +1,5 @@
 # Commands
-make or make m = launch mandatory tests
-make [funtion name] = launch associated test ex: make bzero
+
+`make` or `make m` = launch tests
+
+make [funtion name] = launch associated test ex: `make bzero`
