@@ -17,7 +17,7 @@
  */
 #include <stdlib.h>
 
-div_t div(int numerator, int denominator)
+div_t ft_div(int numerator, int denominator)
 {
     div_t *result = malloc(sizeof(div_t));
 

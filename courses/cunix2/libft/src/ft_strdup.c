@@ -28,7 +28,9 @@ char *ft_strdup(char *s)
 
     char *new_s = (char *) malloc(sizeof(char) * (size_t) len);
     while (*s != '\0')
+    {
         *new_s++ = *s++;
+    }
     *new_s = *s;
 
     return new_s - len + 1;

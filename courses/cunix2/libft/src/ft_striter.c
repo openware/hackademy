@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  ft_striteri.c
+ *       Filename:  ft_striter.c
  *
  *    Description:  Applies function to each character 
  *
@@ -16,13 +16,11 @@
  * =====================================================================================
  */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void ft_striter(char *s, void (*f)(char *))
 {
-    char *s_start = s;
-
     while (*s != '\0')
     {
-        (*f)(s - s_start, s);
+        (*f)(s);
         s++;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  ft_strmapi.c
+ *       Filename:  ft_strmap.c
  *
  *    Description:  Applies given function to each character and writes results to
  *                  new string
@@ -20,15 +20,14 @@
 
 unsigned int my_strlen(const char *);
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char *ft_strmap(const char *s, char (*f)(char))
 {
-    const char *s_start = s;
     unsigned int s_len = my_strlen(s);
     char *new_s = (char *) malloc(sizeof(char) * (s_len + 1));
 
     for (; *s != '\0'; s++, new_s++)
     {
-        *new_s = (*f)(s - s_start, *s);
+        *new_s = (*f)(*s);
     }
     *new_s = *s;
 

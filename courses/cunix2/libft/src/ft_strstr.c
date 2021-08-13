@@ -15,6 +15,7 @@
  *
  * =====================================================================================
  */
+#include <string.h>
 
 char *ft_strstr(const char *haystack, const char *needle)
 {
@@ -48,5 +49,21 @@ char *ft_strstr(const char *haystack, const char *needle)
         haystack++;
     }
 
+    if (*needle == '\0')
+    {
+        return (char *) needle;
+    }
+
     return 0;
 }
+/*
+int main(void)
+{
+    const char *s = "";
+    const char *c = "";
+
+    char *res = strstr(s, c);
+    res = ft_strstr(s, c);
+    res--; res++;
+}
+*/

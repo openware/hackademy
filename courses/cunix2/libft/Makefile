@@ -8,9 +8,11 @@ LIB_NAME			:= libft.a
 STYLE50				:= ~/.local/bin/style50
 
 all:		    clean $(OBJS)
-				@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS)
+				@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) 2>/dev/null
 				@ar rcs $(LIB_NAME) src/*.o
-				@$(STYLE50) $(SRCS) &>/dev/null && echo "LOOKS GOOD!!!"
+				
+checkstyle:
+				@$(STYLE50) $(SRCS) #&>/dev/null && echo "LOOKS GOOD!!!"
 
 clean:
 				$(RM) $(OBJS) $(LIB_NAME)
