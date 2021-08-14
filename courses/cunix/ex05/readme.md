@@ -10,6 +10,7 @@
 * Create a file src/my_puts.c
 * Implement puts in a file called my_puts using the prototype:
 `int puts(const char *s);`
+* use only `write` function to implement your `puts`
 * Run `make test`
 
 ### Docs
