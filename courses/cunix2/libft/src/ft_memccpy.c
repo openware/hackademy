@@ -25,17 +25,13 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 
     while (n-- != 0)
     { 
+        *dest_bytes = *src_bytes;
         if (*dest_bytes == c)
         {
             return dest_bytes + 1;
         }
-        *dest_bytes++ = *src_bytes++;
-        /*
-        if (*(src_bytes - 1) == '\0')
-        {
-            return dest_bytes;
-        }
-        */
+        dest_bytes++;
+        src_bytes++;
     }
 
     return 0;

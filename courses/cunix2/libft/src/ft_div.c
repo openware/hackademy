@@ -19,10 +19,6 @@
 
 div_t ft_div(int numerator, int denominator)
 {
-    div_t *result = malloc(sizeof(div_t));
-
-    result->quot = numerator / denominator;
-    result->rem = numerator % denominator;
-
-    return *result;
+    div_t result = {.quot = numerator / denominator, .rem = numerator % denominator};
+    return result;
 }
