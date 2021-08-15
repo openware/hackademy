@@ -42,7 +42,7 @@ int main(void)
 
 	s = ft_strtrim(" 12  34   ");
 	/* 13 */ check(!strcmp(s, "12  34"));
-	/* 14 */ mcheck(s, 1); free(s); showLeaks();
+	/* 14 */ mcheck(s, 7); free(s); showLeaks();
 	write(1, "\n", 1);
 	return (0);
 }
