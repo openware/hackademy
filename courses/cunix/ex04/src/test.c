@@ -13,6 +13,7 @@ void   test_small()
   assert(my_atoi("42") == 42);
   assert(my_atoi("-42") == -42);
   assert(my_atoi("1k") == 1);
+  assert(my_atoi("123-456") == 123);
 }
 
 void           test_long()
@@ -45,14 +46,33 @@ void           test_verif()
 
 void     test_itoa()
 {
+  char *str = my_itoa(0);
+  assert(strcmp(str, "0") == 0);
+  free(str);
 
-  assert(strcmp(my_itoa(0), "0") == 0);
-  assert(strcmp(my_itoa(1), "1") == 0);
-  assert(strcmp(my_itoa(32), "32") == 0);
-  assert(strcmp(my_itoa(12345678), "12345678") == 0);
-  assert(strcmp(my_itoa(-34), "-34") == 0);
-  assert(strcmp(my_itoa(-12345678), "-12345678") == 0);
-  assert(strcmp(my_itoa(-1234567890), "-1234567890") == 0);
+  str = my_itoa(1);
+  assert(strcmp(str, "1") == 0);
+  free(str);
+
+  str = my_itoa(32);
+  assert(strcmp(str, "32") == 0);
+  free(str);
+
+  str = my_itoa(12345678);
+  assert(strcmp(str, "12345678") == 0);
+  free(str);
+  
+  str = my_itoa(-34);
+  assert(strcmp(str, "-34") == 0);
+  free(str);
+
+  str = my_itoa(-12345678);
+  assert(strcmp(str, "-12345678") == 0);
+  free(str);
+
+  str = my_itoa(-1234567890);
+  assert(strcmp(str, "-1234567890") == 0);
+  free(str);
 }
 int   main()
 {

@@ -9,7 +9,7 @@
 * Go to the course directory `cd cep/courses/cunix/ex02/`
 * Read all files in include/ src/ and the Makefile before starting anything
 * Create a file src/my_strcmp.c
-* Implement strcmp in a file called my_strcmp using the prototype: `int strcmp(char *str1, char *str2);`
+* Implement strcmp in a file called my_strcmp using the prototype: `int my_strcmp(char *str1, char *str2);`
 * Run `make test`
 
 ### Docs
