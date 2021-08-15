@@ -21,7 +21,7 @@ int main(void)
 	/* 2 */ mcheck(s, strlen("hackademy") + 1); free(s); showLeaks();
 
 	s = ft_strsub("hackademy", 1, 1);
-	/* 3 */ check(!strcmp(s, "r"));
+	/* 3 */ check(!strcmp(s, "a"));
 	/* 4 */ mcheck(s, 2); free(s); showLeaks();
 
 	s = ft_strsub("hackademy", 100, 1);
