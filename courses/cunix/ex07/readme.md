@@ -28,8 +28,8 @@ void    list_destroy(node_t **head, void (*fp)(void *data));
 ```
 * Push and unshift will respectively add an element by the end and begining
 ```c
-void    list_push(node_t **head, void *data);
-void    list_unshift(node_t **head, char *key, void *data);
+void    list_push(node_t *head, void *data);
+void    list_unshift(node_t **head, void *data);
 ```
 
 * Those functions will remove elements by the end, begining and by a pointer;
