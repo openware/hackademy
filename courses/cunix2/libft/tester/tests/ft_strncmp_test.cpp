@@ -22,9 +22,9 @@ int main(void)
 	/* 4 */ check(ft_strncmp("1234", "1235", -1) < 0); showLeaks();
 	/* 5 */ check(ft_strncmp("", "", 42) == 0); showLeaks();
 	/* 6 */ check(ft_strncmp("hackademy", "hackademy", 42) == 0); showLeaks();
-	/* 7 */ check(ft_strncmp("hackademy", "hackademy", 42) < 0); showLeaks();
-	/* 8 */ check(ft_strncmp("hackademy", "hackademy", 42) > 0); showLeaks();
-	/* 9 */ check(ft_strncmp("hackademy", "hackademy", 42) > 0); showLeaks();
+	/* 7 */ check(ft_strncmp("Hackademy", "hackademy", 42) < 0); showLeaks();
+	/* 8 */ check(ft_strncmp("hackademy", "hacKademy", 42) > 0); showLeaks();
+	/* 9 */ check(ft_strncmp("hackademy", "hackademY", 42) > 0); showLeaks();
 	/* 10 */ check(ft_strncmp("hackademy", "hackademyX", 42) < 0); showLeaks();
 	/* 11 */ check(ft_strncmp("hackademy", "Tripouill", 42) > 0); showLeaks();
 	/* 12 */ check(ft_strncmp("", "1", 0) == 0); showLeaks();
