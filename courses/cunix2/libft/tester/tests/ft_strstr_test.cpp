@@ -19,56 +19,56 @@ int main(void)
       char	*s1 = "FF";
 			char	*s2 = "see FF your FF return FF now FF";
 
-			char	*i1 = strstr(s1, s2);
-			char	*i2 = ft_strstr(s1, s2);
+			char	*i1 = strstr(s2, s1);
+			char	*i2 = ft_strstr(s2, s1);
 
   /* 1 */ check(i1 == i2);
 
 			s1 = "MZIRIBMZIRIBMZP";
 			s2 = "MZIRIBMZP";
 
-      i1 = strstr(s1, s2);
-      i2 = ft_strstr(s1, s2);
+      i1 = strstr(s2, s1);
+      i2 = ft_strstr(s2, s1);
 
   /* 2 */ check(i1 == i2);
 
       s2 = "FF";
 			s1 = "see F your F return FF now FF";
 
-			i1 = strstr(s1, s2);
-			i2 = ft_strstr(s1, s2);
+			i1 = strstr(s2, s1);
+			i2 = ft_strstr(s2, s1);
 
   /* 3 */ check(i1 == i2);
 
       s1 = "FF";
 			s2 = "see F your F return F now FF";
 
-			i1 = strstr(s1, s2);
-			i2 = ft_strstr(s1, s2);
+			i1 = strstr(s2, s1);
+			i2 = ft_strstr(s2, s1);
 
   /* 4 */ check(i1 == i2);
 
       s1 = "";
 			s2 = "";
 
-			i1 = strstr(s1, s2);
-			i2 = ft_strstr(s1, s2);
+			i1 = strstr(s2, s1);
+			i2 = ft_strstr(s2, s1);
 
   /* 5 */ check(i1 == i2);
 
 			s1 = "can't found that";
 			s2 = "in this !";
 
-			i1 = strstr(s1, s2);
-			i2 = ft_strstr(s1, s2);
+			i1 = strstr(s2, s1);
+			i2 = ft_strstr(s2, s1);
 
   /* 6 */ check(i1 == i2);
 
       s1 = "";
 			s2 = "oh no not the empty string !";
 
-			i1 = strstr(s1, s2);
-			i2 = ft_strstr(s1, s2);
+			i1 = strstr(s2, s1);
+			i2 = ft_strstr(s2, s1);
 
   /* 7 */ check(i1 == i2);
 
