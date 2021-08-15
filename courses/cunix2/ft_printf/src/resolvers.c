@@ -116,7 +116,7 @@ char *itoa(int num)
         *num_s++ = '-';
     }
     
-    num_s = recursive_conv(num, num_s);
+    num_s = (char *) recursive_conv(num, num_s);
     *num_s = '\0';
     return (num_s - length);
 }
@@ -125,7 +125,7 @@ char *recursive_conv(unsigned int nmb, char *nptr)
 {
     if (nmb != 0)
     {
-        nptr = recursive_conv(nmb / 10, nptr);
+        nptr = (char *) recursive_conv(nmb / 10, nptr);
         *nptr++ = '0' + (nmb % 10);
     }
     return nptr;

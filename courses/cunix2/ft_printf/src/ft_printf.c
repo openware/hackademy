@@ -202,12 +202,6 @@ int ft_sprintf(char *s, const char *format, ...)
 
     return result_str_len;
 }
-/*
-int main(void)
-{
-    ft_printf("%s  %-5d: %03c %%Green", "string", 123, 'f');
-}
-*/
 
 unsigned int count_format_chunks(const char *format)
 {
@@ -240,6 +234,9 @@ format_param_t *format_resolver(const char *format)
             case '+':
                 format_param->flags |= 4;
                 break;
+            case '\0':
+                free(format_param);
+                exit(1);
             default:
                 is_flag = 0;
                 break;
