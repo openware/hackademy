@@ -19,6 +19,11 @@
 
 char *ft_strstr(const char *haystack, const char *needle)
 {
+    if (*needle == '\0')
+    {
+        return (char *) haystack;
+    }
+
     char *haystack_r;
     char *needle_r;
     int found = 0;
@@ -49,21 +54,5 @@ char *ft_strstr(const char *haystack, const char *needle)
         haystack++;
     }
 
-    if (*needle == '\0')
-    {
-        return (char *) needle;
-    }
-
     return 0;
 }
-/*
-int main(void)
-{
-    const char *s = "";
-    const char *c = "";
-
-    char *res = strstr(s, c);
-    res = ft_strstr(s, c);
-    res--; res++;
-}
-*/
