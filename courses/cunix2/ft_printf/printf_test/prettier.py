@@ -41,9 +41,16 @@ def parse(options):
         "ko": 0,
         "ko_info": []
     }
+    counter = 0
     for line in sys.stdin:
         sys.stdout.flush()
         line = line.strip()
+        counter += 1
+        if counter == 31:
+            print("\n\nADVANCED TESTS with additional flags and minimum field-width\n\n")
+            continue
+        elif counter == 1:
+            print("\n\nBASIC TESTS: c,s,d,i without additional flags and minimum field-width\n\n")
         m = re.search("^FAIL/(OUTPUT|RETURN|SEGFAULT|TIMEOUT)<>ARGS:(.*)<>EXPECTED:(.*)<>ACTUAL:(.*)$", line)
         if m is None:
             if line == "OK":
