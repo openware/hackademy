@@ -34,6 +34,8 @@ int main(void)
   char	*ret = ft_strmap(b, f_strmap);
   check(!strcmp(b2, ret));
 
+  free(ret);
+
   write(1, "\n", 1);
 	return (0);
 }
