@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -23,11 +23,11 @@ int main(void)
 	signal(SIGSEGV, sigsegv);
 	title("ft_strsplit\t: ")
 
-	char * * tab = ft_strsplit("  tripouille  42  ", ' ');
+	char * * tab = ft_strsplit("  hackademy  42  ", ' ');
 	/* 1 */ mcheck(tab, sizeof(char *) * 3);
 
-	/* 2 */ check(!strcmp(tab[0], "tripouille"));
-	/* 3 */ mcheck(tab[0], strlen("tripouille") + 1);
+	/* 2 */ check(!strcmp(tab[0], "hackademy"));
+	/* 3 */ mcheck(tab[0], strlen("hackademy") + 1);
 
 	/* 4 */ check(!strcmp(tab[1], "42"));
 	/* 5 */ mcheck(tab[1], strlen("42") + 1);
@@ -35,8 +35,8 @@ int main(void)
 	/* 6 */ check(tab[2] == NULL);
 	freeTab(tab); showLeaks();
 
-	tab = ft_strsplit("tripouille", 0);
-	/* 7 */ check(!strcmp(tab[0], "tripouille"));
+	tab = ft_strsplit("hackademy", 0);
+	/* 7 */ check(!strcmp(tab[0], "hackademy"));
 	/* 8 */ check(tab[1] == NULL);
 	freeTab(tab); showLeaks();
 
@@ -61,32 +61,32 @@ int main(void)
 	freeTab(tab); showLeaks();
 
 	/* sguerra- */
-	char * splitme = strdup("Tripouille");
+	char * splitme = strdup("hackademy");
 	tab = ft_strsplit(splitme, ' ');
 	/* 16 */ mcheck(tab, sizeof(char *) * 2);
-	/* 17 */ check(!strcmp(tab[0], "Tripouille"));
+	/* 17 */ check(!strcmp(tab[0], "hackademy"));
 	/* 18 */ check(tab[1] == NULL);
 	free(splitme); freeTab(tab); showLeaks();
 
-	splitme = strdup("Tripouille ");
+	splitme = strdup("hackademy ");
 	tab = ft_strsplit(splitme, ' ');
 	/* 19 */ mcheck(tab, sizeof(char *) * 2);
-	/* 20 */ check(!strcmp(tab[0], "Tripouille"));
+	/* 20 */ check(!strcmp(tab[0], "hackademy"));
 	/* 21 */ check(tab[1] == NULL);
 	free(splitme); freeTab(tab); showLeaks();
 
-	splitme = strdup(" Tripouille");
+	splitme = strdup(" hackademy");
 	tab = ft_strsplit(splitme, ' ');
 	/* 22 */ mcheck(tab, sizeof(char *) * 2);
-	/* 23 */ check(!strcmp(tab[0], "Tripouille"));
+	/* 23 */ check(!strcmp(tab[0], "hackademy"));
 	/* 24 */ check(tab[1] == NULL);
 	free(splitme); freeTab(tab); showLeaks();
 
-	splitme = strdup(" Tripouille ");
+	splitme = strdup(" hackademy ");
 	tab = ft_strsplit(splitme, ' ');
 	/* 25 */ mcheck(tab, sizeof(char *) * 2);
-	/* 26 */ check(!strcmp(tab[0], "Tripouille"));
-	/* 27 */ mcheck(tab[0], strlen("Tripouille") + 1);
+	/* 26 */ check(!strcmp(tab[0], "hackademy"));
+	/* 27 */ mcheck(tab[0], strlen("hackademy") + 1);
 	/* 28 */ check(tab[1] == NULL);
 	free(splitme); freeTab(tab); showLeaks();
 

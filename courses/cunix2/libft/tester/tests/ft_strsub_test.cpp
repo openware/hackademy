@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -16,15 +16,15 @@ int main(void)
 	signal(SIGSEGV, sigsegv);
 	title("ft_strsub\t: ")
 
-	char * s = ft_strsub("tripouille", 0, 42000);
-	/* 1 */ check(!strcmp(s, "tripouille"));
-	/* 2 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
+	char * s = ft_strsub("hackademy", 0, 42000);
+	/* 1 */ check(!strcmp(s, "hackademy"));
+	/* 2 */ mcheck(s, strlen("hackademy") + 1); free(s); showLeaks();
 
-	s = ft_strsub("tripouille", 1, 1);
+	s = ft_strsub("hackademy", 1, 1);
 	/* 3 */ check(!strcmp(s, "r"));
 	/* 4 */ mcheck(s, 2); free(s); showLeaks();
 
-	s = ft_strsub("tripouille", 100, 1);
+	s = ft_strsub("hackademy", 100, 1);
 	/* 5 */ check(!strcmp(s, ""));
 	/* 6 */ mcheck(s, 1); free(s); showLeaks();
 

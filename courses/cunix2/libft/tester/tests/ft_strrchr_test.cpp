@@ -1,6 +1,6 @@
 extern "C"
 {
-#define new tripouille
+#define new hackademy
 #include "libft.h"
 #undef new
 }
@@ -15,7 +15,7 @@ int main(void)
 {
 	signal(SIGSEGV, sigsegv);
 	title("ft_strrchr\t: ")
-	char s[] = "tripouille";
+	char s[] = "hackademy";
 	char s2[] = "ltripouiel";
 	/* 1 */ check(ft_strrchr(s, 't') == s); showLeaks();
 	/* 2 */ check(ft_strrchr(s, 'l') == s + 8); showLeaks();
