@@ -22,7 +22,7 @@ SRC = ft_bzero.c \
 	  ft_strsub.c \
 	  ft_strtrim.c
 
-CCFLAGS = -Wall -Iinclude -Wextra -Werror -g -std=c99
+CFLAGS = -Wall -Iinclude -Wextra -Werror -g -std=c99
 OBJS := $(SRC:.c=.o)
 all: $(NAME)
 $(NAME): 	$(OBJS)

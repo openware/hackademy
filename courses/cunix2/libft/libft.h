@@ -12,3 +12,4 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strmap(char const *s, char (*f)(char));
 char * ft_strsub(char const *s, unsigned int start, size_t len);
+char *  ft_strtrim(char const *s);
