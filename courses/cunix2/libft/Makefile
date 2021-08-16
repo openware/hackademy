@@ -14,4 +14,4 @@ checkstyle:
 				@$(STYLE50) $(SRCS) #&>/dev/null && echo "LOOKS GOOD!!!"
 
 clean:
-				$(RM) $(OBJS) $(LIB_NAME)
+				$(RM) $(OBJS) $(LIB_NAME)  $(wildcard ./*.o)
