@@ -26,4 +26,5 @@ int ft_isdigit(int n);
 int ft_isascii(int n);
 int ft_toupper(int n);
 int ft_tolower(int n);
+
 #endif
