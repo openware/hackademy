@@ -1,18 +1,17 @@
 /*
  * =====================================================================================
  *
- *       Filename:  strchr.c
+ *       Filename:  toupper.c
  *
- *        Created:  16.08.2021 21:12:40
+ *        Created:  16.08.2021 22:34:43
  *       Compiler:  gcc
  *
- *         Author:  vinegod
+ *         Author:  vinegod 
  *
  * =====================================================================================
  */
 
-char *ft_strchr(char *str, char c) {
-    for (; *str != c && *str != '\0'; str++)
-        ;
-    return *str == c ? str : 0;
+
+int ft_toupper(int n) {
+    return n >= 'a' && n <= 'z' ? n - 32 : n;
 }

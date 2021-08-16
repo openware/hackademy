@@ -1,18 +1,17 @@
 /*
  * =====================================================================================
  *
- *       Filename:  strchr.c
+ *       Filename:  isascii.c
  *
- *        Created:  16.08.2021 21:12:40
+ *        Created:  16.08.2021 22:34:31
  *       Compiler:  gcc
  *
- *         Author:  vinegod
+ *         Author:  vinegod 
  *
  * =====================================================================================
  */
 
-char *ft_strchr(char *str, char c) {
-    for (; *str != c && *str != '\0'; str++)
-        ;
-    return *str == c ? str : 0;
+
+int ft_isascii(int n) {
+    return n >= 0 && n <= 127;
 }

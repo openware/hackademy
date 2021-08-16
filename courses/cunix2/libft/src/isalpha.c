@@ -1,18 +1,17 @@
 /*
  * =====================================================================================
  *
- *       Filename:  strchr.c
+ *       Filename:  isalpha.c
  *
- *        Created:  16.08.2021 21:12:40
+ *        Created:  16.08.2021 22:26:44
  *       Compiler:  gcc
  *
- *         Author:  vinegod
+ *         Author:  vinegod 
  *
  * =====================================================================================
  */
 
-char *ft_strchr(char *str, char c) {
-    for (; *str != c && *str != '\0'; str++)
-        ;
-    return *str == c ? str : 0;
+
+int ft_isalpha(int n) {
+    return (n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z');
 }
