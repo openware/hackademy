@@ -2,14 +2,13 @@
 char *ft_strchr(const char *s, int c);
 char *ft_strchr(const char *s, int c)
 {
-    char *p;
-    p =(char *s)p;
-
-    while (*p != c)
+    while ((*s != '\0') && (*s != c))
     {
-        if(*p == '\0')
-            return (0);
-        p++;
+        s++;
     }
-    return (p);
+    if (*s == c)
+    {
+        return ((char *)s);
+    }
+    return ((char*)NULL);
 }

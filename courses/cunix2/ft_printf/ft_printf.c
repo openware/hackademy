@@ -28,3 +28,13 @@ void ft_printf (const char * format, ...)
      }
  
 }
+
+int ft_sprintf(char *str, const char *format, ...)
+{
+    va_list arg;
+    int rc;
+    va_start(arg, format);
+    rc = ft_printf(str, format, arg);
+    va_end(arg);
+    return (rc);
+}
