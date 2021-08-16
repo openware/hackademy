@@ -48,6 +48,4 @@ void test_printf_tests_test(void)
 	ASSERT_PRINTF("%020d",      -1024);
 	ASSERT_PRINTF("%020i",      1024);
 	ASSERT_PRINTF("%020i",      -1024);
-	ASSERT_PRINTF("%020u",      1024u);
-	ASSERT_PRINTF("%020u",      -1024u);
 }
