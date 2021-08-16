@@ -20,7 +20,6 @@ void test_pft_nocrash(void)
 {
 	static int ncm_p = 5;
 
-	ASSERT_PRINTF("%-x", 42);
 	ASSERT_PRINTF("%-c", 'a');
 	ASSERT_PRINTF("%-s", "hello");
 	ASSERT_PRINTF("%-s", NULL);
