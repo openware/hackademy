@@ -1,4 +1,4 @@
-FT_PRINTF_PATH = ../example2
+FT_PRINTF_PATH = ../
 
 CC = gcc
 CCFLAGS = -Wall -Wextra -Wno-trigraphs  # Adding -std=c99 causes crash
