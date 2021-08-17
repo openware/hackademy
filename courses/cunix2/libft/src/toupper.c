@@ -6,12 +6,12 @@
  *        Created:  16.08.2021 22:34:43
  *       Compiler:  gcc
  *
- *         Author:  vinegod 
+ *         Author:  vinegod
  *
  * =====================================================================================
  */
 
-
-int ft_toupper(int n) {
+int ft_toupper(int n)
+{
     return n >= 'a' && n <= 'z' ? n - 32 : n;
 }

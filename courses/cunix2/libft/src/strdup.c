@@ -13,7 +13,8 @@
 
 #include <stdlib.h>
 
-char *ft_strdup(char *str) {
+char *ft_strdup(char *str)
+{
     char *s = str;
     int len = 1;
     while (*s++)

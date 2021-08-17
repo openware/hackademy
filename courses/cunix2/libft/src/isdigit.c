@@ -6,12 +6,12 @@
  *        Created:  16.08.2021 22:29:45
  *       Compiler:  gcc
  *
- *         Author:  vinegod 
+ *         Author:  vinegod
  *
  * =====================================================================================
  */
 
-
-int ft_isdigit(int n) {
+int ft_isdigit(int n)
+{
     return n >= '0' && n <= '9';
 }

@@ -11,7 +11,8 @@
  * =====================================================================================
  */
 
-char *ft_strchr(char *str, char c) {
+char *ft_strchr(char *str, char c)
+{
     for (; *str != c && *str != '\0'; str++)
         ;
     return *str == c ? str : 0;

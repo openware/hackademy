@@ -6,12 +6,12 @@
  *        Created:  16.08.2021 22:26:44
  *       Compiler:  gcc
  *
- *         Author:  vinegod 
+ *         Author:  vinegod
  *
  * =====================================================================================
  */
 
-
-int ft_isalpha(int n) {
+int ft_isalpha(int n)
+{
     return (n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z');
 }

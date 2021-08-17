@@ -6,12 +6,12 @@
  *        Created:  16.08.2021 22:34:52
  *       Compiler:  gcc
  *
- *         Author:  vinegod 
+ *         Author:  vinegod
  *
  * =====================================================================================
  */
 
-
-int ft_tolower(int n) {
+int ft_tolower(int n)
+{
     return n >= 'A' && n <= 'Z' ? n + 32 : n;
 }

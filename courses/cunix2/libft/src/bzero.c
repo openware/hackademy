@@ -11,9 +11,11 @@
  * =====================================================================================
  */
 
-void ft_bzero(void *start, long unsigned len) {
+void ft_bzero(void *start, long unsigned len)
+{
     char *s = start;
-    for (long unsigned int i = 0; i < len; i++) {
+    for (long unsigned int i = 0; i < len; i++)
+    {
         s[i] = '\0';
     }
 }

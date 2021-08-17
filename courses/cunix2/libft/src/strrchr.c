@@ -11,11 +11,12 @@
  * =====================================================================================
  */
 
-
-char *ft_strrchr(char *str, char c) {
+char *ft_strrchr(char *str, char c)
+{
     char *position = str;
     while (*str++)
-        if (*str == c) {
+        if (*str == c)
+        {
             position = str;
         }
     return *position == c ? position : 0;

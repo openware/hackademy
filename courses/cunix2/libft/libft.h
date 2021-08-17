@@ -36,8 +36,6 @@ void *ft_memcpy(void *dest, const char *src, size_t n);
 void *ft_memccpy(void *dest, const void *src, int c, unsigned long int count);
 void *ft_memmove(void *dest, const char *src, unsigned long int n);
 void *ft_memchr(void *str, int c, unsigned long int n);
-int ft_memcmp ( const void * ptr1, const void * ptr2, unsigned long int num );
-
-
+int ft_memcmp(const void *ptr1, const void *ptr2, unsigned long int num);
 
 #endif
