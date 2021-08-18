@@ -38,4 +38,11 @@ void *ft_memmove(void *dest, const char *src, unsigned long int n);
 void *ft_memchr(void *str, int c, unsigned long int n);
 int ft_memcmp(const void *ptr1, const void *ptr2, unsigned long int num);
 
+void ft_striter(char *s,void (*f)(char *));
+char *ft_strmap(const char *s, char (*f)(char));
+char *ft_strsub(const char *s, unsigned int start, size_t len);
+char *ft_strjoin(const char *s1, const char *s2);
+char *ft_strtrim(const char *s);
+char **ft_strsplit(char const *s, char c);
+
 #endif
