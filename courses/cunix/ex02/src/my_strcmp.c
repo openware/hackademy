@@ -18,16 +18,14 @@
 
 
 int my_strcmp(char *str1, char *str2) {
-    char *ch1 = str1, *ch2 = str2;
-
-    while (*(ch1) != '\0' && *(ch2) != '\0') {
-        if (*(ch1) != *(ch2)) {
-            return *(ch1) - *(ch2);
+    while (*(str1) != '\0' && *(str2) != '\0') {
+        if (*(str1) != *(str2)) {
+            return *(str1) - *(str2);
         }
-        ch1++;
-        ch2++;
+        str1++;
+        str2++;
     }
 
-    return *(ch1) - *(ch2);
+    return *(str1) - *(str2);
 }
 /* -----  end of function my_strcmp  ----- */
