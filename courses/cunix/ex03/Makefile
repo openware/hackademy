@@ -29,7 +29,7 @@ fclean: 		    clean
 re: 				fclean all
 
 test:				re
-						@(./$(NAME) && echo "Test success" || echo "Test Fails")
+						@(./$(NAME) && echo "Test Successes" || echo "Test Fails")
 
 debug:              $(NAME)
 					valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
