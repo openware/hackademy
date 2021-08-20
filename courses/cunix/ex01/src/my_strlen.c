@@ -18,9 +18,8 @@
 
 unsigned int my_strlen(char *str)
 {
-    char *ch = str;
     unsigned int len = 0;
-    while (*(ch++) != '\0')
+    while (*(str++) != '\0')
     {
         len++;
     }
