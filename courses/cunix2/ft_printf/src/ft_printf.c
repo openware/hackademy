@@ -46,6 +46,7 @@ int ft_printf(const char *format, ...)
             char *value = my_itoa(num, &len);
             show_sign = num < 0 ? '-' : show_sign;
             print(value, left, fill, show_sign, _print_space, order - len);
+            free(value);
         }
         break;
         case 'c': {
