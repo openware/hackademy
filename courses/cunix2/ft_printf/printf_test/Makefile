@@ -2,7 +2,7 @@ FT_PRINTF_PATH = ../
 
 CC = gcc
 CCFLAGS = -Wall -Wextra -Wno-trigraphs  # Adding -std=c99 causes crash
-LDFLAGS = -L$(FT_PRINTF_PATH) -lftprintf
+LDFLAGS = -L$(FT_PRINTF_PATH) -l:printf.a
 
 NAME = ft_printf_test
 CHECK_LEAKS_NAME = check_leaks
