@@ -14,7 +14,7 @@ void print(const char *str, char left, char fill, char, char, int num);
 int my_strlen(const char *str)
 {
     int len = 0;
-    while (*str++)
+    while(*str++)
         len++;
     return len;
 }
@@ -24,6 +24,7 @@ int ft_printf(const char *format, ...)
     va_list ap;
     va_start(ap, format);
     const char *p;
+
     for (p = format; *p; p++)
     {
         if (*p != '%')
@@ -63,7 +64,9 @@ int ft_printf(const char *format, ...)
         }
         break;
         case 's': {
-            const char *value = va_arg(ap, const char *);
+            char *value = va_arg(ap, char *);
+            if (value == NULL)
+                value = "(null)";
             print(value, left, fill, show_sign, _print_space, order - my_strlen(value));
         }
         break;
@@ -72,6 +75,7 @@ int ft_printf(const char *format, ...)
             break;
         }
     }
+    va_end(ap);
     return p - format;
 }
 
@@ -154,10 +158,4 @@ void print(const char *str, char left, char fill, char show_sign, char print_spa
         }
         _print_out(str);
     }
-}
-
-int main()
-{
-    ft_printf("{%3c}  ", 0);
-    printf("{%3c}", 0);
 }
