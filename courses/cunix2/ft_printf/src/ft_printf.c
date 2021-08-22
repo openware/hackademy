@@ -7,17 +7,8 @@
 #define STDOUT 1
 
 char *my_itoa(long nmb, int *len);
-
-void fill_buffer(char *c, int num);
-void _print_out(const char *str);
 void print(const char *str, char left, char fill, char, char, int num);
-int my_strlen(const char *str)
-{
-    int len = 0;
-    while (*str++)
-        len++;
-    return len;
-}
+int my_strlen(const char *str);
 
 int ft_printf(const char *format, ...)
 {
@@ -77,6 +68,14 @@ int ft_printf(const char *format, ...)
     }
     va_end(ap);
     return p - format;
+}
+
+int my_strlen(const char *str)
+{
+    int len = 0;
+    while (*str++)
+        len++;
+    return len;
 }
 
 char *my_itoa(long int nmb, int *len)
