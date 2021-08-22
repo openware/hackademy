@@ -14,7 +14,7 @@ void print(const char *str, char left, char fill, char, char, int num);
 int my_strlen(const char *str)
 {
     int len = 0;
-    while(*str++)
+    while (*str++)
         len++;
     return len;
 }
