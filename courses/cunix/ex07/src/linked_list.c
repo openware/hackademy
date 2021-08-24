@@ -18,8 +18,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "linked_list.h"
 
-void *_node_create(void *data, node_t *next)
+node_t  *_node_create(void *data, node_t *next)
 {
     node_t *node = malloc(sizeof(node_t));
 
@@ -104,7 +105,10 @@ void *list_pop(node_t **head)
 
     node_t *popped_node = curr->next;
     curr->next = NULL;
-    return popped_node;
+
+    void *data = popped_node->data;
+    free(popped_node);
+    return data;
 }
 
 // Removes and returns the first node
@@ -117,21 +121,29 @@ void *list_shift(node_t **head)
 
     node_t *old_head = *head;
     *head = (*head)->next; // even if there is no 'next' node, we make Head points to NULL
-    return old_head;
+
+    void *data = old_head->data;
+    free(old_head);
+    return data;
 }
 
 // Removes and returns node being pointed by 'ptr'
-void *list_remove(node_t **head, node_t *ptr)
+void *list_remove(node_t **head, int pos)
 {
-    if (!head || !(*head) || !ptr)
+    if (!head || !(*head) || pos < 0)
     {
         return NULL;
     }
 
     node_t *curr = *head;
-    while (curr->next != ptr && curr->next)
+    for (int i = 0; i < pos; i++)
     {
-        curr = curr-> next;
+        if (!curr->next)
+        {
+            return NULL;
+        }
+
+        curr = curr->next;
     }
 
     // node pointed by 'ptr' is not in the list
@@ -142,7 +154,10 @@ void *list_remove(node_t **head, node_t *ptr)
 
     node_t *node_to_remove = curr->next;
     curr->next = node_to_remove->next;
-    return node_to_remove;
+
+    void *data = node_to_remove->data;
+    free(node_to_remove);
+    return data;
 }
 
 void list_print(node_t *head)
@@ -160,7 +175,7 @@ void list_visitor(node_t *head, void (*fp)(void *data))
     node_t *curr = head;
     while (curr)
     {
-        (*fp)(curr->data);
+        fp(curr->data);
         curr = curr->next;
     }
 }
