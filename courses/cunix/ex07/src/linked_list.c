@@ -19,12 +19,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct node {
-	void	*data;
-	struct node	*next;
-} node_t;
-
-// Special internal function for node creation
 void *_node_create(void *data, node_t *next)
 {
     node_t *node = malloc(sizeof(node_t));
