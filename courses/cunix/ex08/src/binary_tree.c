@@ -19,14 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-
-typedef struct node
-{
-    char *key;
-    void *data;
-    struct node *left;
-    struct node *right;
-} node_t;
+#include "binary_tree.h"
 
 node_t *allocnode()
 {
@@ -83,7 +76,7 @@ void visit_tree(node_t *node, void (*fp)(node_t *root))
     }
 
     visit_tree(node->left, fp);
-    (*fp)(node);
+    fp(node);
     visit_tree(node->right, fp);
 }
 
@@ -97,6 +90,6 @@ void destroy_tree(node_t *node, void (*fdestroy)(node_t *root))
 
     destroy_tree(node->left, fdestroy);
     destroy_tree(node->right, fdestroy);
-    (*fdestroy)(node);
+    fdestroy(node);
     free(node);
 }
