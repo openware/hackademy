@@ -36,7 +36,7 @@ void    list_unshift(node_t **head, void *data);
 ```c
 void    *list_pop(node_t **head);
 void    *list_shift(node_t **head);
-void    *list_remove(node_t **head, node_t *ptr);
+void    *list_remove(node_t **head, int pos);
 ```
 
 * You can visit an entire list and apply a function fp
