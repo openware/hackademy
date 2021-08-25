@@ -19,6 +19,7 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 #include <stddef.h>
+#include <stdlib.h>
 
 void ft_bzero(void *s, size_t n);
 char *ft_strdup(const char *s);
@@ -30,5 +31,7 @@ int ft_isdigit(int c);
 int ft_isascii(int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
+int ft_abs(int j);
+div_t ft_div(int numerator, int denominator);
 
 #endif
