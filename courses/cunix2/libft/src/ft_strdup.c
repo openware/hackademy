@@ -29,7 +29,7 @@ char *ft_strdup(const char *s)
 
     str = str - len;
 
-    char *new_str = (char *) malloc(sizeof(char *) * (size_t) len);
+    char *new_str = (char *) malloc((size_t) len);
     
     while (*str != '\0')
     {
