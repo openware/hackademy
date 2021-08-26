@@ -21,6 +21,10 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+// Other
+size_t ft_strlen(const char *s);
+
+// Day 1
 void ft_bzero(void *s, size_t n);
 char *ft_strdup(const char *s);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -31,6 +35,8 @@ int ft_isdigit(int c);
 int ft_isascii(int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
+
+// Day 2
 int ft_abs(int j);
 div_t ft_div(int numerator, int denominator);
 char *ft_strstr(const char *haystack, const char *needle);
@@ -41,5 +47,10 @@ void *ft_memccpy(void *__restrict__ dest, const void *__restrict__ src, int c, s
 void *ft_memmove(void *dest, const void *src, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
+
+// Day 3
+void ft_striter(char *s, void (*f)(char *));
+char *ft_strmap(char const *s, char (*f)(char));
+char *ft_strsub(char const *s, unsigned int start, size_t len);
 
 #endif
