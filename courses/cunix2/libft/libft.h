@@ -23,6 +23,8 @@
 
 // Other
 size_t ft_strlen(const char *s);
+unsigned int ft_words(const char *s, char c);
+size_t ft_strclen(const char *s, char c);
 
 // Day 1
 void ft_bzero(void *s, size_t n);
@@ -52,5 +54,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 void ft_striter(char *s, void (*f)(char *));
 char *ft_strmap(char const *s, char (*f)(char));
 char *ft_strsub(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s);
+char **ft_strsplit(char const *s, char c);
 
 #endif
