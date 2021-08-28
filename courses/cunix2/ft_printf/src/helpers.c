@@ -17,6 +17,7 @@
  */
 
 #include <stdlib.h>
+#include <limits.h>
 
 char *_numtostr(unsigned int num, char *str)
 {
@@ -36,6 +37,13 @@ char *itoa(int num)
         char *str = (char *) malloc(sizeof(char) * 2);
         *str = '0';
         *(str + 1) = '\0';
+        return str;
+    }
+
+    if (num == INT_MIN)
+    {
+        char *str = (char *) malloc(sizeof(char) * 11 + 1);
+        str = "-2147483648";
         return str;
     }
 

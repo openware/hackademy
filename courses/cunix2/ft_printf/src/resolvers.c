@@ -41,6 +41,9 @@ format_param_t *format_resolver(const char *format)
             case '+':
                 format_param->flags |= 4;
                 break;
+            case ' ':
+                format_param->flags |= 8;
+                break;
             case '\0':
                 free(format_param);
                 exit(1);
@@ -70,38 +73,54 @@ char *num_resolver(format_param_t *format_param, int num)
     char *num_str = itoa(num);
     unsigned int num_str_len = buff_len(num_str);
 
-    unsigned int is_signed = (format_param->flags & 4) ? 1 : 0;
+    unsigned int is_spaced = (format_param->flags & 8 && num >= 0) ? 1 : 0;
+    unsigned int is_signed = (format_param->flags & 4 && num >= 0) ? 1 : 0;
     unsigned int is_left_aligned = (format_param->flags & 2) ? 1 : 0;
     char pad = (format_param->flags & 1) ? '0' : ' ';
 
     unsigned int res_str_len;
-    if (num_str_len + is_signed > format_param->min_field_width)
+    if (num_str_len + is_signed > format_param->min_field_width ||
+            num_str_len + is_spaced > format_param->min_field_width)
     {
-        res_str_len = num_str_len + is_signed;
+        res_str_len = num_str_len + (is_signed || is_spaced);
     }
     else
     {
         res_str_len = format_param->min_field_width;
     }
 
-    unsigned int num_of_pad = res_str_len - num_str_len - is_signed;
+    unsigned int num_of_pad = res_str_len - num_str_len - is_signed - is_spaced;
+
     char *res_str = (char *) malloc(sizeof(char) * (res_str_len + 1));
     
     if (is_signed && num >= 0)
     {
         *res_str++ = '+';
     }
-    if (num < 0)
+
+    if (num < 0 && pad == '0')
     {
         *res_str++ = *num_str++;
     }
 
     if (!is_left_aligned)
     {
+        
+        if (is_spaced)
+        {
+            *res_str++ = ' ';
+        }
+
         while (num_of_pad-- != 0)
         {
             *res_str++ = pad;
         }
+
+        if (num < 0 && pad == ' ')
+        {
+            *res_str++ = *num_str++;
+        }
+
         while (*num_str != '\0')
         {
             *res_str++ = *num_str++;
@@ -109,6 +128,17 @@ char *num_resolver(format_param_t *format_param, int num)
     }
     else
     {
+        
+        if (num < 0 && pad == ' ')
+        {
+            *res_str++ = *num_str++;
+        }
+
+        if (is_spaced)
+        {
+            *res_str++ = ' ';
+        }
+
         while (*num_str != '\0')
         {
             *res_str++ = *num_str++;
