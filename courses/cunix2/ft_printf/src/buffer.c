@@ -50,6 +50,10 @@ char *create_buff(const char *format)
 const char *next_param(const char *format)
 {
     while (*format != '%' && *format != '\0')
+    {
         format++;
+    }
+
     return format;
 }
+

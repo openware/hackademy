@@ -30,7 +30,7 @@ format_param_t *format_resolver(const char *format)
 
     while (is_flag)
     {
-        switch(*++format)
+        switch (*++format)
         {
             case '0':
                 format_param->flags |= 1;
@@ -80,7 +80,7 @@ char *num_resolver(format_param_t *format_param, int num)
 
     unsigned int res_str_len;
     if (num_str_len + is_signed > format_param->min_field_width ||
-            num_str_len + is_spaced > format_param->min_field_width)
+        num_str_len + is_spaced > format_param->min_field_width)
     {
         res_str_len = num_str_len + (is_signed || is_spaced);
     }
