@@ -5,13 +5,17 @@ int my_atoi(const char *nptr)
     {
         return 0;
     }
+    
     int sign = 1;
+    
     if (*nptr == '-')
     {
         sign = -1;
         nptr++;
     }
+    
     int res = 0;
+    
     while (*nptr)
     {
         if (*nptr >= '0' && *nptr <= '9')
@@ -23,5 +27,6 @@ int my_atoi(const char *nptr)
             break;
         }
     } 
+    
     return res * sign;
 }

@@ -7,6 +7,8 @@ int my_puts(const char *s)
     {
         write(1, s++, 1);
     }
+    
     write(1, "\n", 1);   
+    
     return 1;
 }

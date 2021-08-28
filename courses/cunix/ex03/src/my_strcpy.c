@@ -2,12 +2,15 @@
 char *my_strcpy(char *dest, const char *src)
 {
     char *destPtr = dest;
-    while(*src)
+    
+    while (*src)
     {
         *dest = *src;
         dest++;
         src++;
     }
+    
     *dest = '\0';
+    
     return destPtr;
 }
