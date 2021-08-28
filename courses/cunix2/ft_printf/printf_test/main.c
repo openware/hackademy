@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	timeout.tv_sec = 0;
 	timeout.tv_usec = 100000;
 
-	// Basic part of printf - c,s,d,i without additional flags and minimum field-width
+    // Basic part of printf - c,s,d,i without additional flags and minimum field-width
 	test_pft_nacked();
 
 	test_moulitest_00();
@@ -41,8 +41,8 @@ int main(int argc, char **argv)
 	test_moulitest_03();
 	test_moulitest_09();
 	test_moulitest_16();
-
- // Advanced part of printf - with additional flags and minimum field-width
+ 
+    // Advanced part of printf - with additional flags and minimum field-width
 	test_pft_percent();
 	test_pft_nocrash();
 	test_pft_string();

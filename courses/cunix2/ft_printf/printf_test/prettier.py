@@ -41,11 +41,11 @@ def parse(options):
         "ko": 0,
         "ko_info": []
     }
-    counter = 0
+    counter = 0;
     for line in sys.stdin:
         sys.stdout.flush()
         line = line.strip()
-        counter += 1
+        counter += 1;
         if counter == 31:
             print("\n\nADVANCED TESTS with additional flags and minimum field-width\n\n")
             continue

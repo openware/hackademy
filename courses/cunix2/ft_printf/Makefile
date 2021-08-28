@@ -1,20 +1,23 @@
-CC			:= gcc
-RM			:= rm -rf
-CFLAGS		+= -std=c99 -Iinclude -Wall -Wextra -Werror -g -c
-SRCS		:= $(wildcard src/*.c)
-OBJS		:= $(SRCS:.c=.o)
-LIB_NAME	:= printf.a
-STYLE50		:= ~/.local/bin/style50
+CC		:= gcc
+RM		:= rm -rf
+LDFLAGS	+= -Llib
+CFLAGS	+= -std=c99 -Iinclude -Wall -Wextra -Werror -g -c
+SRCS	:= $(wildcard src/*.c)
+OBJS	:= $(SRCS:.c=.o)
+LIB_NAME	:= libftprintf.a
+STYLE50	:= ~/.local/bin/style50
 
 
 printf:		fclean $(OBJS)
-			@$(CC) $(CFLAGS) $(SRCS)
+			@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o a.out
+
+bonus:		all
 
 all:		fclean $(OBJS)
-			@$(CC) $(CFLAGS) $(SRCS)
+			@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS)
 			@ar rcs $(LIB_NAME) $(OBJS)
 
-checkstyle:
+checkstyle:	
 			$(STYLE50) $(SRCS)
 
 fclean:
