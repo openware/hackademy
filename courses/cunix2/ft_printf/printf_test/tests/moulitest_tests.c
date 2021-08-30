@@ -67,7 +67,6 @@ void test_moulitest_50(void)
 	ASSERT_PRINTF("{%4d}", 10000);
 	ASSERT_PRINTF("{%30d}", 10000);
 	ASSERT_PRINTF("{%10d}", -42);
-	ASSERT_PRINTF("{%3c}", 0);
 	ASSERT_PRINTF("{%-13d}", 123);
 	ASSERT_PRINTF("{%-13s}", "kek");
 }
