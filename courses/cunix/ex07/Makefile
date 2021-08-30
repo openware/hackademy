@@ -5,7 +5,7 @@ RM					:= rm -rf
 
 LDFLAGS				+= -Llib
 
-CFLAGS				+= -Iinclude -Wall -Wextra -Werror -g
+CFLAGS				+= -std=c99 -Iinclude -Wall -Wextra -Werror -g
 
 SRCS				:= $(wildcard src/*.c)
 
@@ -36,3 +36,4 @@ test:				$(TNAME)
 
 debug:				$(TNAME)
 					valgrind -v --leak-check=full --track-origins=yes ./$(TNAME)
+
