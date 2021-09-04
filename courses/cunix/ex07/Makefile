@@ -1,7 +1,7 @@
 
-CC				:= gcc
+CC					:= gcc
 
-RM				:= rm -rf
+RM					:= rm -rf
 
 LDFLAGS				+= -Llib
 
@@ -11,23 +11,29 @@ SRCS				:= $(wildcard src/*.c)
 
 OBJS				:= $(SRCS:.c=.o)
 
-NAME				:= linked_list_test
+TNAME				:= linked_list_test
 
-all:				$(NAME)
+all:				$(OBJS)
 
-$(NAME):			$(OBJS)
-				$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
+lib: all liblinked_list.a
+
+liblinked_list.a:	src/linked_list.o
+								ar rcs $@ $^
+
+$(TNAME):			$(OBJS)
+					$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 clean:
-				$(RM) $(OBJS)
+						$(RM) $(OBJS)
 
-fclean:					clean
-				$(RM) $(NAME)
+fclean: 			clean
+					$(RM) $(TNAME) $(ANAME)
 
-re:					fclean all
+re: 				fclean all
 
-test:				re
-				@(./$(NAME) && echo "Test success" || echo "Test Fails")
+test:				$(TNAME)
+					@(./$(TNAME) && echo "Test success" || echo "Test Fails")
 
-debug:				$(NAME)
-				valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
+debug:				$(TNAME)
+					valgrind -v --leak-check=full --track-origins=yes ./$(TNAME)
+

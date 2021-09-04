@@ -1,7 +1,9 @@
 
-CC				:= gcc
+# vim: noai:ts=4:sw=4
 
-RM				:= rm -rf
+CC					:= gcc
+
+RM					:= rm -rf
 
 LDFLAGS				+= -Llib
 
@@ -16,18 +18,21 @@ NAME				:= puts_test
 all:				$(NAME)
 
 $(NAME):			$(OBJS)
-				$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
+						$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 clean:
-				$(RM) $(OBJS)
+						$(RM) $(OBJS)
+						$(RM) output.test
 
-fclean:					clean
-				$(RM) $(NAME)
+fclean: 			clean
+						$(RM) $(NAME)
 
-re:					fclean all
+re: 				fclean all
 
 test:				re
-				@(./$(NAME) && echo "Test success" || echo "Test Fails")
+						$(shell ./$(NAME) > output.test)
+						@(diff -q output.verif output.test && echo "Test success" || echo "Test Fails")
 
-debug:				$(NAME)
-				valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
+debug:              $(NAME)
+					valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
+

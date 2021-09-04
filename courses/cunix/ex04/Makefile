@@ -1,11 +1,11 @@
 
-CC				:= gcc
+CC					:= gcc
 
-RM				:= rm -rf
+RM					:= rm -rf
 
-LDFLAGS				+= -Llib
+LDFLAGS			    += -Llib
 
-CFLAGS				+= -std=c99 -Iinclude -Wall -Wextra -Werror -g
+CFLAGS		    	+= -std=c99 -Iinclude -Wall -Wextra -Werror -g
 
 SRCS				:= $(wildcard src/*.c)
 
@@ -16,18 +16,19 @@ NAME				:= atoi_test
 all:				$(NAME)
 
 $(NAME):			$(OBJS)
-				$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
+						$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 clean:
-				$(RM) $(OBJS)
+						$(RM) $(OBJS)
 
-fclean:					clean
-				$(RM) $(NAME)
+fclean: 			clean
+						$(RM) $(NAME)
 
-re:					fclean all
+re: 				fclean all
 
 test:				re
-				@(./$(NAME) && echo "Test success" || echo "Test Fails")
+						@(./$(NAME) && echo "Test success" || echo "Test Fails")
 
-debug:				$(NAME)
-				valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
+debug:              $(NAME)
+					valgrind -v --leak-check=full --track-origins=yes ./$(NAME)
+
