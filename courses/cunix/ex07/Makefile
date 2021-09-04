@@ -11,7 +11,7 @@ SRCS				:= $(wildcard src/*.c)
 
 OBJS				:= $(SRCS:.c=.o)
 
-NAME				:= strlen_test
+NAME				:= linked_list_test
 
 all:				$(NAME)
 
