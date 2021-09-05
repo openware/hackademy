@@ -8,10 +8,10 @@ STYLE50		:= ~/.local/bin/style50
 
 
 printf:		fclean $(OBJS)
-			@$(CC) $(CFLAGS) $(SRCS)
+			@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o a.out
 
 all:		fclean $(OBJS)
-			@$(CC) $(CFLAGS) $(SRCS)
+			@$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS)
 			@ar rcs $(LIB_NAME) $(OBJS)
 
 checkstyle:
