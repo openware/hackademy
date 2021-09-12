@@ -11,18 +11,11 @@ void test_pft_percent(void)
 {
 	ASSERT_PRINTF("%%");
 	ASSERT_PRINTF("%5%");
-	ASSERT_PRINTF("%-5%");
 	ASSERT_PRINTF("%05%");
-	ASSERT_PRINTF("%-05%");
 }
 
 void test_pft_nocrash(void)
 {
-	static int ncm_p = 5;
-
-	ASSERT_PRINTF("%-c", 'a');
-	ASSERT_PRINTF("%-s", "hello");
-	ASSERT_PRINTF("%-s", NULL);
 	ASSERT_PRINTF("%23s", NULL);
 	ASSERT_PRINTF("%s", NULL);
 }
@@ -41,16 +34,10 @@ void test_pft_string(void)
 	ASSERT_PRINTF("%32s", "abc");
 	ASSERT_PRINTF("%16s", "nark nark");
 	ASSERT_PRINTF("%5s", "goes over");
-	ASSERT_PRINTF("%-32s", "abc");
-	ASSERT_PRINTF("%-16s", "nark nark");
-	ASSERT_PRINTF("%-5s", "goes over");
 	ASSERT_PRINTF("hello, %s.", NULL);
 	ASSERT_PRINTF("%s", NULL);
 	ASSERT_PRINTF("%32s", NULL);
 	ASSERT_PRINTF("%2s", NULL);
-	ASSERT_PRINTF("%-32s", NULL);
-	ASSERT_PRINTF("%-16s", NULL);
-	ASSERT_PRINTF("%-3s", NULL);
 
 	static char *s_hidden = "hi low\0don't print me lol\0";
 	ASSERT_PRINTF("%s", s_hidden);
@@ -79,13 +66,6 @@ void test_pft_int_i(void)
 	ASSERT_PRINTF("%5i", -2562);
 	ASSERT_PRINTF("%4i", 94827);
 	ASSERT_PRINTF("%4i", -2464);
-	ASSERT_PRINTF("%-7i", 33);
-	ASSERT_PRINTF("%-7i", -14);
-	ASSERT_PRINTF("%-3i", 0);
-	ASSERT_PRINTF("%-5i", 52625);
-	ASSERT_PRINTF("%-5i", -2562);
-	ASSERT_PRINTF("%-4i", 94827);
-	ASSERT_PRINTF("%-4i", -2464);
 	ASSERT_PRINTF("%05i", 43);
 	ASSERT_PRINTF("%07i", -54);
 	ASSERT_PRINTF("%03i", 0);

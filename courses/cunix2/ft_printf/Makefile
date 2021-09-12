@@ -3,7 +3,7 @@ RM			:= rm -rf
 CFLAGS		+= -std=c99 -Iinclude -Wall -Wextra -Werror -g -c
 SRCS		:= $(wildcard src/*.c)
 OBJS		:= $(SRCS:.c=.o)
-LIB_NAME	:= printf.a
+LIB_NAME	:= libprintf.a
 STYLE50		:= ~/.local/bin/style50
 
 

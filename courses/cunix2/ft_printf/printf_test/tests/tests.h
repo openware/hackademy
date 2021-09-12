@@ -15,7 +15,6 @@ void test_moulitest_05(void);
 void test_moulitest_09(void);
 void test_moulitest_16(void);
 void test_moulitest_50(void);
-void test_moulitest_51(void);
 void test_moulitest_52(void);
 void test_moulitest_61(void);
 void test_moulitest_69(void);

@@ -50,7 +50,6 @@ int main(int argc, char **argv)
 
 	test_moulitest_05();
 	test_moulitest_50();
-	test_moulitest_51();
 	test_moulitest_52();
 	test_moulitest_61();
 	test_moulitest_69();

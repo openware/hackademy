@@ -39,11 +39,6 @@ void test_printf_tests_test(void)
 
 	ASSERT_PRINTF("%20c",      'x');
 
-	ASSERT_PRINTF("%-20d",      1024);
-	ASSERT_PRINTF("%-20d",      -1024);
-	ASSERT_PRINTF("%-20i",      1024);
-	ASSERT_PRINTF("%-20i",      -1024);
-
 	ASSERT_PRINTF("%020d",      1024);
 	ASSERT_PRINTF("%020d",      -1024);
 	ASSERT_PRINTF("%020i",      1024);
