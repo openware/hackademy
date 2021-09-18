@@ -3,9 +3,9 @@ CC				:= gcc
 
 RM				:= rm -rf
 
-LDFLAGS		    	+= -Llib
-
 CFLAGS		    	+= -Iinclude -Wall -Wextra -Werror -g
+
+LDFLAGS		    	+= -Llib
 
 SRCS				:= $(wildcard src/*.c)
 
@@ -15,8 +15,8 @@ NAME				:= strlen_test
 
 all:				$(NAME)
 
-$(NAME):		    $(OBJS)
-				$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
+$(NAME):			$(OBJS)
+						$(CC) $(CFLAGS) -o $(NAME) $(OBJS)  $(LDFLAGS)  
 
 clean:
 				$(RM) $(OBJS)
@@ -29,5 +29,5 @@ re: 				fclean all
 test:				re
 				@(./$(NAME) && echo "Test success" || echo "Test Fails")
 
-debug:              $(NAME)
+debug:				$(NAME)
 				valgrind -v --leak-check=full --track-origins=yes ./$(NAME)

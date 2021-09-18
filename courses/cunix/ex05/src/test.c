@@ -5,6 +5,7 @@
 #include <string.h>
 #include "test.h"
 
+
 void   test_all()
 {
   my_puts("Nine people can't make a baby in a month.\n");
@@ -26,6 +27,7 @@ void           test_verif()
 int   main()
 {
   test_all();
+  //printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
   test_verif();
   return(0);
 }
