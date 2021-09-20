@@ -15,7 +15,7 @@ void    list_unshift(node_t **head, void *data);
 
 void    *list_pop(node_t **head);
 void    *list_shift(node_t **head);
-void    *list_remove(node_t **head, int pos);
+void    *list_remove(node_t **head,int pos);
 
 void    list_print(node_t *head);
 void    list_visitor(node_t *head, void (*fp)(void *data));

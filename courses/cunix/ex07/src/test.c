@@ -7,7 +7,7 @@
 
 void printInt(void *data)
 {
-  printf("%s\n", data);
+  printf("%p\n", data);
 }
 
 void test_destroy_push(void *data)
@@ -121,6 +121,7 @@ int test_pop()
   list_push(head, str);
 
   free(list_pop(&head));
+  
 
   list_destroy(&head, &test_destroy_push);
 
@@ -139,6 +140,7 @@ int test_shift()
 
   free(list_shift(&head));
   free(list_shift(&head));
+  
 
   list_destroy(&head, &test_destroy_push);
 
@@ -163,8 +165,9 @@ int test_remove()
   list_push(head, str);
   asprintf(&str, "5");
   list_push(head, str);
-
+  list_remove(&head, 3);
   free(list_remove(&head, 3));
+  
 
   list_destroy(&head, &test_destroy_push);
 
@@ -209,9 +212,11 @@ int test_global()
 
   for(int i = 0; i < 10000; i++)
     free(list_pop(&head));
+    
 
   for(int i = 0; i < 10000; i++)
     free(list_shift(&head));
+    
 
   list_destroy(&head, &test_destroy_push);
 

@@ -1,0 +1,64 @@
+
+void    list_push(node_t *head, void *data){
+  node_t* newNode = malloc(sizeof(node_t));
+  newNode->data = data;
+  newNode->next = head; // The '*' to dereferences back to the real head
+  head = newNode; 
+  
+  
+  /*
+  node_t *last = getLast(head);
+    node_t *tmp = (node_t*) malloc(sizeof(node_t));
+    tmp->data = data;
+    tmp->next = NULL;
+    last->next = tmp;*/
+}
+void    list_unshift(node_t **head, void *data){
+    node_t *lastbn = NULL;
+    //Получили NULL
+    if (!head) {
+        exit(-1);
+    }
+    //Список пуст
+    if (!(*head)) {
+        exit(-1);
+    }
+    do while(**head->next!=NULL){
+      lastbn=**head->next;
+    }
+    //Если в списке один элемент
+    if (lastbn == NULL) {
+        free(*head);
+        *head = NULL;
+    } else {
+        free(lastbn->next);
+        lastbn->next = NULL;
+    }
+}
+
+ void    *list_remove(node_t **head,int pos){
+     // Unlink the deleted node from list
+    /*node_t *temp = *head, *prev;
+    if (temp != NULL && temp->data == pos) {
+        *head = temp->next; 
+        free(temp); 
+    }else{
+    while (temp != NULL && temp->data != pos) {
+        prev = temp;
+        temp = temp->next;
+    }
+    prev->next = temp->next;
+ 
+    free(temp); 
+    }*/
+ }
+
+
+ *node_t *head=head;
+  node_t *temp;       
+     while(head!=NULL);  
+     {
+          temp=head;
+          head=head->next;
+          free(temp);
+     }
