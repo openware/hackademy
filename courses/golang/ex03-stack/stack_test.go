@@ -12,7 +12,7 @@ func TestStack(t *testing.T) {
 	stack.Push(5)
 
 	for i := 5; i > 0; i-- {
-		item := stack.Pop()
+		item, _ := stack.Pop()
 
 		if item != i {
 			t.Error("TestStack failed...", i)
@@ -32,4 +32,10 @@ func TestStack(t *testing.T) {
 			t.Error("TestStack failed...", i)
 		}
 	}
+
+    _, ok := stack.Pop()
+
+    if ok {
+        t.Error("TestStack failed... ok: want: false, have: true")
+    }
 }
