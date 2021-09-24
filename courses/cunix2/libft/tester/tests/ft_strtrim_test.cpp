@@ -30,7 +30,7 @@ int main(void)
 	
 	s = ft_strtrim("      ");
 	/* 7 */ check(!strcmp(s, ""));
-	/* 8 */ mcheck(s, 1); free(s); showLeaks();
+	/* 8 */ mcheck(s, 1);free(s); showLeaks();
 
 	s = ft_strtrim("");
 	/* 9 */ check(!strcmp(s, ""));
