@@ -1,11 +1,11 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef HEAD2_H
+#define HEAD2_H
 
 #include <stdarg.h> // va_list 
-#include <stdlib.h> // malloc, free 
+#include <stdlib.h> 
 #include <unistd.h> // write 
 
-// helper functions 
+
 char* (*get_func(char i))(va_list);
 char *create_buffer(void);
 void write_buffer(char *buffer, int len, va_list list);

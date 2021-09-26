@@ -1,5 +1,4 @@
-#include "holberton.h"
-
+#include "head2.h"
 char *_strcpy(char *dest, char *src)
 {
 	int x = 0;
@@ -9,7 +8,6 @@ char *_strcpy(char *dest, char *src)
 		dest[x] = src[x];
 		x++;
 	}
-
 	dest[x] = src[x];
 	return (dest);
 }

@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "head2.h"
 
 
 
@@ -76,13 +76,13 @@ int ft_printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] != '%') /* copy format into buffer until '%' */
+		if (format[i] != '%') 
 		{
 			len = check_buffer_overflow(buffer, len);
 			buffer[len++] = format[i++];
 			total_len++;
 		}
-		else /* if %, find function */
+		else 
 		{
 			
 			i++;
@@ -149,13 +149,13 @@ int ft_printf(const char *format, ...)
 				
 			}*/
 
-			if (format[i] == '\0') /* handle single ending % */
+			if (format[i] == '\0') 
 			{
 				va_end(list);
 				free(buffer);
 				return (-1);
 			}
-			if (format[i] == '%') /* handle double %'s */
+			if (format[i] == '%') 
 			{
 				len = check_buffer_overflow(buffer, len);
 				buffer[len++] = format[i];
@@ -165,14 +165,14 @@ int ft_printf(const char *format, ...)
 			{
 
 
-				f = get_func(format[i]); /* grab function */
-				if (f == NULL)  /* handle fake id */
+				f = get_func(format[i]); 
+				if (f == NULL)  
 				{
 					len = check_buffer_overflow(buffer, len);
 					buffer[len++] = '%'; total_len++;
 					buffer[len++] = format[i]; total_len++;
 				}
-				else /* return string, copy to buffer */
+				else 
 				{
 					str = f(list);
 					if (str == NULL)
@@ -188,7 +188,15 @@ int ft_printf(const char *format, ...)
 						total_len++;
 					}
 					j = 0;
-					//int y = _strlen(str);
+					int op=0;
+					while (str[j] != '\0')
+					{
+						j++;
+						op++;
+
+					}
+					j = 0;
+					
 					if(plus)
 						{
 							if(str[j] != '-')
@@ -201,7 +209,7 @@ int ft_printf(const char *format, ...)
 						}
 					if(nmbr)
 						{
-							nmbr = s - _strlen(str);
+							nmbr = s - op;
 							if (nmbr > 0)
 							{
 								for(int l=0;l<nmbr;l++)
@@ -233,6 +241,7 @@ int ft_printf(const char *format, ...)
 						len = check_buffer_overflow(buffer, len);
 						buffer[len++] = str[j];
 						total_len++; j++;
+						
 						
 					}
 					free(str);

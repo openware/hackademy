@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "head2.h"
 
 
 char *_itos(int div, int length, int n)
@@ -12,22 +12,20 @@ char *_itos(int div, int length, int n)
 		return (NULL);
 	}
 		
-	
-	
 
-	if (n < 0) /* account for negative sign */
+	if (n < 0) 
 	{
 		str[0] = '-';
 		i++;
 	}
-	while (n < 0) /* convert each num to string */
+	while (n < 0) 
 	{
-		str[i] = ((n / div) * -1 + '0'); /* *-1 to handle min int */
+		str[i] = ((n / div) * -1 + '0'); 
 		n = n % div;
 		div /= 10;
 		i++;
 	}
-	while (div >= 1) /* same, this case for positives */
+	while (div >= 1) 
 	{
 		str[i] = ((n / div) + '0');
 		n = n % div;
