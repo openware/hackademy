@@ -1,0 +1,14 @@
+{
+  "name": "tailProject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.3.6",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.16"
+  },
+  "scripts": {
+    "build": "postcss index.css -o build/index.css"
+  }
+}
