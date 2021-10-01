@@ -14,6 +14,7 @@
 * Implement itoa in a file called my_itoa using the prototype:
 `char* my_itoa(int nmb);`
 * Run `make test`
+* use only `write`,`malloc`,`free` function to implement your code
 
 ### Docs
 `man 3 atoi`
