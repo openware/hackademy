@@ -9,5 +9,9 @@ int my_puts(const char *s)
 	if(write(1, s, strlen(s)) == EOF || write(1, "\n", 1) == EOF)
 	{
 		return EOF;
-	} else return 0;
+	} 
+	else 
+	{
+		return 0;
+	}
 }
