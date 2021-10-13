@@ -7,7 +7,7 @@
 
 void printInt(void *data)
 {
-  printf("%s\n", data);
+  printf("%s\n", (char *)data);
 }
 
 void test_destroy_push(void *data)
