@@ -16,6 +16,7 @@ int my_strcmp(char *str1, char *str2){
             return -1;
         }
     }
+    
     // it will return 0 if str1 is equal to str2
     return 0;
 }
