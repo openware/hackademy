@@ -5,7 +5,7 @@
 #include <string.h>
 #include "test.h"
 
-void   test_small()
+void test_small()
 {
   assert(my_strcmp("", "") == 0);
   assert(my_strcmp("A", "A") == 0);
@@ -15,15 +15,15 @@ void   test_small()
   assert(my_strcmp("AB", "AD") < 0);
 }
 
-void   test_long()
+void test_long()
 {
   assert(my_strcmp("HELLO WORLD", "HELLA WORLD") > 0);
   assert(my_strcmp("HELLO WORLD", "HELL WORLD") > 0);
 }
 
-int   main()
+int main()
 {
   test_small();
   test_long();
-  return(0);
+  return (0);
 }
