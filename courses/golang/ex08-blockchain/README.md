@@ -23,7 +23,7 @@ Implement mining algorithm with customized
 [difficulty](https://en.bitcoin.it/wiki/Difficulty) setting.
 
 ### Hints
-* [Basic prototype Blockchein (sha256)](https://jeiwan.cc/posts/building-blockchain-in-go-part-1/)
+* [Basic prototype Blockchein (sha256)](https://jeiwan.net/posts/building-blockchain-in-go-part-1/)
 
 ## Learning
 
