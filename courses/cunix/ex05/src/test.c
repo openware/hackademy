@@ -5,7 +5,7 @@
 #include <string.h>
 #include "test.h"
 
-void   test_all()
+void test_all()
 {
   my_puts("Nine people can't make a baby in a month.\n");
   my_puts("There are only two hard things in Computer Science: cache invalidation and naming things.");
@@ -14,7 +14,7 @@ void   test_all()
   my_puts("*********************************************************************************");
 }
 
-void           test_verif()
+void test_verif()
 {
   puts("Nine people can't make a baby in a month.\n");
   puts("There are only two hard things in Computer Science: cache invalidation and naming things.");
@@ -23,9 +23,9 @@ void           test_verif()
   puts("*********************************************************************************");
 }
 
-int   main()
+int main()
 {
   test_all();
   test_verif();
-  return(0);
+  return (0);
 }
