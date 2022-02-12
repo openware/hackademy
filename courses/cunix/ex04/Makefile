@@ -5,7 +5,7 @@ RM					:= rm -rf
 
 LDFLAGS			    += -Llib
 
-CFLAGS		    	+= -Iinclude -Wall -Wextra -Werror -g
+CFLAGS		    	+= -Iinclude -Wall -Wextra -Werror -g -std=c99
 
 SRCS				:= $(wildcard src/*.c)
 
