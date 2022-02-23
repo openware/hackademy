@@ -1,4 +1,4 @@
-int ft_abs(int j)
+int ft_abs(int val)
 {
-    return (j < 0 ? -j : j);
+    return (val < 0 ? -val : val);
 }

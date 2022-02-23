@@ -1,4 +1,4 @@
-int ft_isalpha(int c)
+int ft_isalpha(int ch)
 {
-    return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
+    return ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'));
 }

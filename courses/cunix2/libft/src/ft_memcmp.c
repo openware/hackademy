@@ -1,14 +1,12 @@
-#include <stddef.h>
-
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int ft_memcmp(const void *str1, const void *str2, int length)
 {
-    unsigned char *s1_pos = (unsigned char *) s1;
-    unsigned char *s2_pos = (unsigned char *) s2;
+    unsigned char *str1_pos = (unsigned char *) str1;
+    unsigned char *str2_pos = (unsigned char *) str2;
     int diff;
 
-    while (n-- != 0)
+    while (length-- != 0)
     {
-        diff = *s1_pos++ - *s2_pos++;
+        diff = *str1_pos++ - *str2_pos++;
 
         if (diff != 0)
         {

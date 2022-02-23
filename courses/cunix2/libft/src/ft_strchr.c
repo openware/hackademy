@@ -1,18 +1,19 @@
-#include <stddef.h>
-
-char *ft_strchr(const char *s, int c)
+char *ft_strchr(const char *str, int ch)
 {
-    c %= 256;
-
-    while (*s != '\0')
+    if (ch >= 256)
     {
-        if (*s == c)
-        {
-            return (char *) s;
-        }
-
-        s++;
+        ch %= 256;
     }
 
-    return (*s == c) ? (char *) s : 0;
+    while (*str != '\0')
+    {
+        if (*str == ch)
+        {
+            return (char *) str;
+        }
+
+        str++;
+    }
+
+    return (*str == ch) ? (char *) str : 0;
 }

@@ -1,9 +1,9 @@
-int ft_tolower(int c)
+int ft_tolower(int ch)
 {
-    if ('A' <= c && c <= 'Z')
+    if (ch >= 65 && ch <= 90)
     {
-        c += 32;
+        ch += 32;
     }
 
-    return c;
+    return ch;
 }
