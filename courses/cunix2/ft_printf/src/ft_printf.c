@@ -89,7 +89,7 @@ void print(const char *str, char left, char fill, char show_sign, char print_spa
             fill_buffer(&fill, num - first_char);
             print_begin(show_sign, print_space);
         }
-        _print_out(str);
+        print_out(str);
     }
 }
 
