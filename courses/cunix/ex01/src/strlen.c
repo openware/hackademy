@@ -1,11 +1,11 @@
 #include <stdio.h>
-
-size_t my_strlen(const char *str);
+#include "my_strlen.h" 
 
 int main() {
     const char *test_str = "Hello, World!";
-    size_t length = my_strlen(test_str);
-    
-    printf( test_str, length);
+    int length = my_strlen(test_str);
+
+    printf("Length of the string is: %d\n", length);
+
     return 0;
 }
