@@ -1,0 +1,5 @@
+head -n <number_of_lines> surnames.txt > surnames_n_lines.txt
+
+grep "Q-Chem" surnames_n_lines.txt | sed -e 's/[[:alpha:]]\.//g' -e 's/[^a-zA-Z,-]//g' -e 's/,/\n/g'
+
+head -n <number_of_lines> surnames.txt > surnames_n_lines.txt && grep "Q-Chem" surnames_n_lines.txt | sed -e 's/[[:alpha:]]\.//g' -e 's/[^a-zA-Z,-]//g' -e 's/,/\n/g'
