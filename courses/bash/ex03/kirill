@@ -1,4 +1,4 @@
-ех3 #!/bin/bash
+ #!/bin/bash
 
 if [ "$#" -ne 4 ]; then
     echo "Usage: $0 filename keyword1 keyword2 keyword3" >&2
