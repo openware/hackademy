@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 pattern" >&2
+    exit 1
+fi
+
+pattern=$1
+
+# Use find to search for all files in or below the current working directory
+find . -type f | while read -r file; do
+    # Use grep to search for the pattern in each file and print file path and line number
+    grep -Hn "$pattern" "$file"
+done
+
+exit 0
