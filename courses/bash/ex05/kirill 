@@ -1,22 +1,18 @@
  #!/bin/bash
 
-# Check if at least one argument is provided
 if [ "$#" -lt 2 ]; then
     echo "Usage: $0 {-m|-s|-e|-o} number1 number2 ..." >&2
     exit 1
 fi
 
-# Get the operation argument
 operation=$1
 shift
 
-# Initialize variables
 sum=0
 count=0
 even_sum=0
 odd_sum=0
 
-# Loop through all the numbers provided
 for number in "$@"; do
     sum=$(echo "$sum + $number" | bc)
     count=$((count + 1))
@@ -27,7 +23,6 @@ for number in "$@"; do
     fi
 done
 
-# Perform the required operation
 case $operation in
     -s)
         echo "Sum: $sum"
