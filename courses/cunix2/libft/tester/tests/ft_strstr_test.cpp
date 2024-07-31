@@ -16,63 +16,63 @@ int main(void)
   signal(SIGSEGV, sigsegv);
 	title("ft_strstr\t: ")
 
-      char	*s1 = "FF";
-			char	*s2 = "see FF your FF return FF now FF";
+      char	*s1 = (char *) "FF";
+			char	*s2 = (char *) "see FF your FF return FF now FF";
 
 			char	*i1 = strstr(s2, s1);
 			char	*i2 = ft_strstr(s2, s1);
 
   /* 1 */ check(i1 == i2);
 
-			s1 = "MZIRIBMZIRIBMZP";
-			s2 = "MZIRIBMZP";
+			s1 = (char *) "MZIRIBMZIRIBMZP";
+			s2 = (char *) "MZIRIBMZP";
 
       i1 = strstr(s2, s1);
       i2 = ft_strstr(s2, s1);
 
   /* 2 */ check(i1 == i2);
 
-      s2 = "FF";
-			s1 = "see F your F return FF now FF";
+      s2 = (char *) "FF";
+			s1 = (char *) "see F your F return FF now FF";
 
 			i1 = strstr(s2, s1);
 			i2 = ft_strstr(s2, s1);
 
   /* 3 */ check(i1 == i2);
 
-      s1 = "FF";
-			s2 = "see F your F return F now FF";
+      s1 = (char *) "FF";
+			s2 = (char *) "see F your F return F now FF";
 
 			i1 = strstr(s2, s1);
 			i2 = ft_strstr(s2, s1);
 
   /* 4 */ check(i1 == i2);
 
-      s1 = "";
-			s2 = "";
+      s1 = (char *) "";
+			s2 = (char *) "";
 
 			i1 = strstr(s2, s1);
 			i2 = ft_strstr(s2, s1);
 
   /* 5 */ check(i1 == i2);
 
-			s1 = "can't found that";
-			s2 = "in this !";
+			s1 = (char *) "can't found that";
+			s2 = (char *) "in this !";
 
 			i1 = strstr(s2, s1);
 			i2 = ft_strstr(s2, s1);
 
   /* 6 */ check(i1 == i2);
 
-      s1 = "";
-			s2 = "oh no not the empty string !";
+      s1 = (char *) "";
+			s2 = (char *) "oh no not the empty string !";
 
 			i1 = strstr(s2, s1);
 			i2 = ft_strstr(s2, s1);
 
   /* 7 */ check(i1 == i2);
 
-      s1 = "AAAAAAAAAAAAA";
+      s1 = (char *) "AAAAAAAAAAAAA";
 
 			i1 = strstr(s1, s1);
 			i2 = ft_strstr(s1, s1);
